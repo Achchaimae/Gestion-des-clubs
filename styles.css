@@ -1,0 +1,120 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}/* 
+.nav { grid-area: nav; }
+.clubs { grid-area: clubs;}
+.calender { grid-area: calender; background-color: greenyellow;}
+.todo { grid-area: todo; background-color: antiquewhite;}
+ */body{
+    padding: 1rem;
+    height: 100vh;
+    background-color: #CFDCFF;
+}
+.main-container {
+    /* display: grid;
+    grid-template:
+        'nav clubs clubs clubs clubs clubs clubs clubs calender calender calender calender calender'
+        'nav clubs clubs clubs clubs clubs clubs clubs todo todo todo todo todo';
+    grid-gap: 3vh 5vw; */
+    margin-left: 6rem;
+    height: 100%;
+    position: fixed;
+}
+/* nav bar */
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+    width: 4rem;
+}
+li{
+    list-style: none;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: auto;
+    padding: 60px 0;
+    border-radius: 10px;
+    background-color: #1D0E2C;
+    position: fixed;
+    
+}
+i{
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 10px;
+}
+/* general */
+.clubs,.calender,.todo{
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+}
+.club_info{
+    display: inline-block;
+    
+    height: 90vh;
+    overflow-y: scroll;
+}
+.club_info::-webkit-scrollbar {
+    display: none;
+  }
+h3{
+    text-align: center;
+}
+.clubs h3{
+    padding-bottom: 10px;
+}
+/* clubs */
+.clubs{
+    width: fit-content;
+    position: fixed;
+}
+.club{
+    background-color: #5E87F5;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    background-color: #CFDCFF;
+    border-radius: 50%;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* right */
+.right{
+    width: 30vw;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+.calender{
+    height: 45vh;
+}
+.todo{
+    height: 45vh;
+}
