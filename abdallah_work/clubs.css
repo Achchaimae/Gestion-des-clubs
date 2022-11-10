@@ -26,7 +26,10 @@
     background-color: #5E87F5;
     border-radius: 10px;
     padding: 1rem 1rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
 }
 /* nav bar */
 ul{
@@ -45,13 +48,12 @@ li{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     width: auto;
     padding: 60px 0;
     border-radius: 10px;
     background-color: #1D0E2C;
     position: fixed;
-    
 }
 i{
     color: white;
@@ -71,6 +73,8 @@ i{
 
 .description textarea{
     width: 100%;
+    min-height: 100px;
+    resize: none;
 }
 
 .header{
@@ -142,4 +146,18 @@ i{
 }
 .member_count{
     display: inline-block;
+}
+
+.textarea{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+.textarea i{
+    position: absolute;
+    color: #1D0E2C;
+    right: -7px;
+    bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
 }
