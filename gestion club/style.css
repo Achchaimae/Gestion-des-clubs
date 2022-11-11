@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #CFDCFF;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    /* gap: 3rem; */
+}
+section{
+    margin-bottom: 2rem;
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    
+    padding: 1rem 2rem;
+    }
+.youcode_logo{
+    text-align: right;
+}
+.youcode_logo img{
+    width: 12rem;
+    
+}
+.Sign_up{
+  width: 2rem;
+  height: 2rem;
+
+}
+.events{
+    background-image: url(event_of_week.png);
+    background-repeat: no-repeat;
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    left: 10%;
+    /* position: relative; */
+    top: 5rem;
+    /* flex-direction: column; */
+    margin: 0 auto;
+    display: flex;
+    
+    align-items: flex-end;
+
+    
+}
+.events p{
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+.clubs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem ;
+    padding-top: 2rem;
+}
+.club_card{
+    background-image: url(gaming.png);
+    background-repeat: no-repeat;
+    width: 80vw;
+    background-position: top;
+    background-size: cover;
+    height: 20rem;
+    cursor:pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.club_name {
+    text-align: center;
+    order: 2;
+    letter-spacing: 4px;
+    margin-left: auto;
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+ 
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+
+}
+.hover_effect{
+    order: 1;
+    font-size:larger;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.left_card {
+    margin-left: 0;
+}
+
+.hover_effect{
+    width: 80%;
+    display: none;
+}
+:is(.club_card:hover) .hover_effect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.club_name{
+    background-color: #1D0E2C;
+}
+.right .hover_effect{
+    order: 3;
+}
+.left{
+    border-radius: 10px 0 0 10px;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    border-radius:  0 10px 10px 0 ;
+    margin: 0 auto 0 0;
+    display: flex;
+    justify-content: left;
+}
+.hover_effect button{
+    padding: 10px;
+    background-color: #4E69C3;
+    border-radius: 5px;
+    border: none;
+}
+.hover_effect button a{
+    color: #fff;
+    text-decoration: none;
+
+}
+/* end styling index page */
+
+/* styling Sign_up page */
+
+.SignUp_form{
+    padding: 5% 0;
+    flex-direction: column;
+    background-color: #4E69C3; 
+    border-radius: 20px;
+    height: 20rem;
+    width: 60vw; 
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.SignUp_form input{
+    
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #login_btn{
+    width: 20%;
+    background-color: #1D0E2C;
+    color: #fff;
+} 
+/* .club_card .club_name {
+    text-align: center;
+    
+    letter-spacing: 4px;
+    
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+ 
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+}
+
+.club_card .quote{
+    font-size:larger;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quote button{
+    display: none;
+}
+.club_card .quote p{
+    display: none;
+    width: 80%;
+}
+
+:is(.club_card:hover) .quote p{
+    display: block;
+    
+}
+:is(.club_card:hover) .quote button{
+    display: block;
+    
+}
+.club_name{
+    background-color: #1D0E2C;
+}
+.right .quote{
+    order: 3;
+}
+
+
+.left{
+    border-radius: 10px 0 0 10px;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    border-radius:  0 10px 10px 0 ;
+    margin: 0 auto 0 0;
+    display: flex;
+    justify-content: left;
+}
+ */
