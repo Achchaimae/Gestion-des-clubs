@@ -25,10 +25,10 @@
     
     background-color: #5E87F5;
     border-radius: 10px;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 95vh;
 }
 /* nav bar */
@@ -55,39 +55,40 @@ li{
     background-color: #1D0E2C;
     position: fixed;
 }
-i{
+.nav i{
     color: white;
     font-size: 1.3rem;
     margin: 0 10px;
 }
 
 /*  */
-.description p{
+/* .description h2{
     display: inline;
 
-}
+} */
 .description{
     display: flex;
-    gap: 10%;
+    gap: 5%;
 }
 
 .description textarea{
     width: 100%;
     min-height: 100px;
     resize: none;
+    padding: 5px;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 5% 0;
+    /* margin: 5% 0; */
 }
 .main-container p{
     color: white;
 }
 .right .modifier i{
-    color: #1D0E2C;
+
     font-size: 15px;
 }
 .right .modifier{
@@ -95,8 +96,12 @@ i{
     border: none;
     position: absolute;
    
-    bottom: 5px;
-    left: -5px;
+    bottom: 0px;
+    right: 5px;
+}
+.fa-solid{
+    color: #1D0E2C;
+    font-size: 15px;
 }
 .modifier{
     display: block;
@@ -121,21 +126,14 @@ i{
     border-radius: 50%;
 }
 
-.club_name{
-    font-weight: bolder;
-    letter-spacing: 2px;
-    font-size: 24px;
 
-}
 .member_count{
     font-size: 12px;
     letter-spacing: 0.5px;
 }
 .representant{
     display: inline-block;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: capitalize;
+    
 }
 .representant_name{
     display: inline-block;
@@ -150,14 +148,48 @@ i{
 
 .textarea{
     width: 100%;
-    height: fit-content;
+ 
     position: relative;
 }
 .textarea i{
     position: absolute;
-    color: #1D0E2C;
-    right: -7px;
-    bottom: 10px;
+
+    right: 0px;
+    bottom: 0px;
     cursor: pointer;
     font-size: 15px;
+}
+h2,h1,th{
+    text-transform: capitalize;
+}
+/* evenets */
+
+#events {
+
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #events td, #events th {
+    border: 0.5px solid #1D0E2C;
+    padding: 8px;
+ 
+  }
+
+  
+  #events tr:nth-child(even){background-color: #f2f2f2;}
+  #events tr:nth-child(odd){background-color: #fff;}
+  
+  #events tr:hover {background-color: #ddd;}
+  
+  #events th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#1D0E2C;
+    color: white;
+  }
+
+.modifier_event {
+    background-color: #5E87F5;
 }
