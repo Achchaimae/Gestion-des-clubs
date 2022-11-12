@@ -6,12 +6,12 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: #CFDCFF;
+    background:  linear-gradient(155.11deg, #1D0E2C 0%, #2D2C5E 19.71%, #3D4B91 36.38%, #4E69C3 53.46%, #5E87F5 68.63%);
 }
 main{
     display: flex;
     flex-direction: column;
-    /* gap: 3rem; */
+    
 }
 section{
     margin-bottom: 2rem;
@@ -35,16 +35,14 @@ section{
 
 }
 .events{
-    background-image: url(event_of_week.png);
+    background-image: url(../image/event_of_week.png);
     background-repeat: no-repeat;
     width: 80%;
     background-position: center;
     background-size: cover;
     height: 20rem;
     left: 10%;
-    /* position: relative; */
     top: 5rem;
-    /* flex-direction: column; */
     margin: 0 auto;
     display: flex;
     
@@ -65,7 +63,7 @@ section{
     padding-top: 2rem;
 }
 .club_card{
-    background-image: url(gaming.png);
+    background-image: url(../image/gaming.png);
     background-repeat: no-repeat;
     width: 80vw;
     background-position: top;
@@ -172,86 +170,131 @@ section{
     width: 50%;
     height: 3rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  #login_btn{
     width: 20%;
     background-color: #1D0E2C;
     color: #fff;
 } 
-/* .club_card .club_name {
-    text-align: center;
-    
-    letter-spacing: 4px;
-    
-    color: #ffffff;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
- 
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 12rem;
-}
-
-.club_card .quote{
-    font-size:larger;
-    color: #ffffff;
-    text-align: center;
-    width: 100%;
+/* styling club page */
+.club_container{
+    margin:  auto 3rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
 }
-.quote button{
-    display: none;
+.club_title{
+ 
+width: 80vw;
+height: 3rem;
+left: 0px;
+top: 872px;
+margin-left: 0;
+background:#1D0E2C;
+color: #fff;
+border-radius: 0px 90px 10px 0px;
+padding-top: 3px;
 }
-.club_card .quote p{
-    display: none;
-    width: 80%;
-}
-
-:is(.club_card:hover) .quote p{
-    display: block;
-    
-}
-:is(.club_card:hover) .quote button{
-    display: block;
-    
-}
-.club_name{
-    background-color: #1D0E2C;
-}
-.right .quote{
-    order: 3;
-}
-
-
-.left{
-    border-radius: 10px 0 0 10px;
-    margin: 0 0 0 auto;
+.img_club{
+    background-image: url(../image/event_of_week.png);
+    background-repeat: no-repeat;
+    width: 95%;
+    background-position: center;
+    background-size: cover;
+    height:25rem;
+    border-radius: 12px;
+    top: 5rem;
+    margin: 0 auto;
     display: flex;
+    align-items: flex-end; 
+}
+.demande{
+    margin-top: 2rem;
+    margin-left: 82vw;
+}
+.demande_btn{
+    width: 6rem;
+    height:2.5rem;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2D2C5E;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.about_club{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    justify-items: center;
+    gap:2rem;
+}
+.club_desc{
+    background: white;
+    width: 60vw;
+    border-radius: 20px;
+    padding: 10px 10px;
+
+}
+.club_membres{
+    width: 30vw;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+.club_membres li{
+    list-style-type: none;
+}
+.galerie{
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   gap: 2rem;
+
+
+}
+.activite{
+    background: url(../image/activite.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer; 
+    width: 20rem;
+    height: 20rem;
+    border-radius: 12px;
+    justify-items: flex-end;
+    align-items: flex-end;
+}
+.activite:hover { 
+  background:#2d2c5ed5;
+  opacity: 13;
 }
 
-.right{
-    border-radius:  0 10px 10px 0 ;
-    margin: 0 auto 0 0;
-    display: flex;
-    justify-content: left;
+.activite{
+    transition: 0.3s;
+    transform: translateY(-20px);
 }
- */
+.activite:hover h3 , .activite:hover p{ 
+   transform: translateY(0);
+}
+ .activite h3{
+    color: white;
+    text-align: center;
+    display: none;
+    margin: 5px auto ;
+}
+.activite p{
+    padding: 10px;
+    color: white;
+    font-size: medium;
+    text-align: center;
+    justify-self: unset;
+    display: none;
+}
+:is(.activite:hover) h3{
+   display: block;
+}  
+:is(.activite:hover) p{
+    display: block;
+ }  
