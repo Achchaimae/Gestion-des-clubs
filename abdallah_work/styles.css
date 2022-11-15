@@ -26,7 +26,7 @@
     height: 96vh;
     position: relative;
 margin-left: 14vh;
-    background-color:white;
+    /* background-color:white; */
     display: flex;
     justify-content: space-around;
 }
@@ -67,8 +67,8 @@ i{
 
 }
 .club_info{
-   
-    margin: 20px 0;
+    position: relative;
+    top: 0;
     height: 100%;
     overflow-y: scroll;
 }
@@ -84,18 +84,32 @@ h3{
 }
 .title{
     height: fit-content;
-    
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     position:absolute;
     top: 0;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
+.add-button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #43B0F1;
+    color: white;
+    transition: background-color 200ms ease-in-out;
 
+}
+.add-button:hover{
+    background-color: aqua;
+    transition: background-color 300ms ease-in-out;
+}
 .title,.footer{
     background-color: #1D0E2C;
+    z-index: 2;
 }
 
 .footer{
@@ -107,7 +121,7 @@ h3{
     bottom: 0;
     right: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
  }
  .footer button{
     border: none;
@@ -119,6 +133,7 @@ h3{
     min-width: 80px;
     color:#1D0E2C;
     font-size: 15px;
+    display: none;
  }
  button:nth-child(1){
     background-color: #B1E0FB;
@@ -133,7 +148,8 @@ h3{
 .clubs{
     width: 100%;
    padding: 20px 40px;
-   margin: 50px;
+   padding-top: 70px;
+   margin: 40px;
    box-sizing: content-box;
    position: relative;
     border: 2px solid #1D0E2C;
@@ -142,8 +158,7 @@ h3{
     background-color: #5E87F5;
     border-radius: 10px;
     padding: 10px 20px;
-    margin: 30px 0;
-    
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -175,9 +190,14 @@ h3{
 }
 .todo{
     background-color: #1D0E2C;
+    position: relative;
     height:fit-content;
     min-width: 250px;
 }
 .right h3{
+    color: white;
+}
+
+.todo p{
     color: white;
 }
