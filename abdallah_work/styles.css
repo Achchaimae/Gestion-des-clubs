@@ -31,7 +31,7 @@
     justify-content: space-around;
 }
 /* nav bar */
-ul{
+.nav ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,13 +195,10 @@ h3{
     position: relative;
     height:fit-content;
     min-width: 250px;
+    padding: 20px;
 }
 .right h3{
     color: #1D0E2C;
-}
-
-.todo p{
-    color: white;
 }
 
 @media screen and (max-width: 700px) {
@@ -227,3 +224,51 @@ h3{
         height: 50vh;
     }
 }
+
+.todo .header{
+    border-radius: inherit;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.todo input{
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    padding: 5px;
+    border: none;
+}
+.todo .add-button{
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    fill: #1D0E2C;
+}
+.add-todo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.todos p{
+    color: #1D0E2C;
+}
+.todos i{
+    color: #1D0E2C;
+}
+.task i{
+    color: #1D0E2C;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px;
+}
+.todo ul{
+    width: 100%;
+}
+
+i,svg{
+    cursor: pointer;
+}
+
