@@ -6,13 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background:  linear-gradient(155.11deg, #1D0E2C 0%, #2D2C5E 19.71%, #3D4B91 36.38%, #4E69C3 53.46%, #5E87F5 68.63%);
+background-color: #E8EEF1;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    
-}
+
 section{
     margin-bottom: 2rem;
 }
@@ -26,136 +22,118 @@ section{
     text-align: right;
 }
 .youcode_logo img{
-    width: 12rem;
-    
+    width: 12rem;  
 }
-.Sign_up{
-  width: 2rem;
-  height: 2rem;
-
+.youcode_logo h3{
+    font-family: 'Rock Salt';
 }
-.events{
-    background-image: url(../image/event_of_week.png);
-    background-repeat: no-repeat;
-    width: 80%;
-    background-position: center;
-    background-size: cover;
-    height: 20rem;
-    left: 10%;
-    top: 5rem;
-    margin: 0 auto;
+.slider{
     display: flex;
-    
-    align-items: flex-end;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-items:center;
+    margin: 0 auto;
+     /* margin: 1rem; */
+     opacity: 1;
+}
+.event_desc{
+    margin-left: 5rem;
+    font-size: large;
+}
+.slider:hover{
+    transition: background-color 1s ease-in-out;
+    background-color:#4E69C3 ;
+    opacity: 0.8;
+    border-radius: 30px;
+}
+.shape{
+    margin-right: -15%;
+    width: 50%;
+
+}
+.event_img{
+   -webkit-mask-image: url(
+    data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRjAwNjYiIGQ9Ik01MS4xLC01NS4yQzY3LjUsLTQ3LjIsODIuNywtMzIuMyw4Mi40LC0xN0M4Mi4xLC0xLjgsNjYuMiwxMy42LDU1LjUsMzEuOUM0NC44LDUwLjEsMzkuMiw3MS4yLDI1LjEsODJDMTEsOTIuOCwtMTEuNiw5My4zLC0yNyw4My42Qy00Mi40LDczLjksLTUwLjcsNTMuOSwtNTcuNiwzNi4xQy02NC41LDE4LjIsLTcwLDIuNSwtNjkuMSwtMTMuOEMtNjguMSwtMzAsLTYwLjcsLTQ2LjcsLTQ4LjEsLTU1LjNDLTM1LjUsLTYzLjksLTE3LjcsLTY0LjUsLTAuMiwtNjQuM0MxNy40LC02NC4xLDM0LjgsLTYzLjIsNTEuMSwtNTUuMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K
+    );
+   -webkit-mask-repeat: no-repeat;
+    width: 100%;
 
     
+    
 }
-.events p{
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-align: center;
-    width: 100%;
-}
+
 .clubs{
     display: flex;
     flex-direction: column;
-    gap: 2rem ;
-    padding-top: 2rem;
+    /* gap:2rem; */
 }
 .club_card{
-    background-image: url(../image/gaming.png);
-    background-repeat: no-repeat;
-    width: 80vw;
-    background-position: top;
-    background-size: cover;
-    height: 20rem;
-    cursor:pointer;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.club_name {
-    text-align: center;
-    order: 2;
-    letter-spacing: 4px;
-    margin-left: auto;
-    color: #ffffff;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
- 
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20rem;
-
-}
-.hover_effect{
-    order: 1;
-    font-size:larger;
-    color: #ffffff;
-    text-align: center;
-    width: 100%;
-    height: 80%;
-    margin: 0 auto;
-}
-
-.left_card {
-    margin-left: 0;
-}
-
-.hover_effect{
-    width: 80%;
-    display: none;
-}
-:is(.club_card:hover) .hover_effect{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-.club_name{
-    background-color: #1D0E2C;
-}
-.right .hover_effect{
-    order: 3;
-}
-.left{
-    border-radius: 10px 0 0 10px;
-    margin: 0 0 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items:center;
+    margin: 4rem;
 }
 
-.right{
-    border-radius:  0 10px 10px 0 ;
-    margin: 0 auto 0 0;
+.club_img img{
+width: 20vw;
+border-radius: 12px;
+}
+.abt_club{
+    text-align: center;
+    font-weight: 500;
     display: flex;
-    justify-content: left;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
 }
-.hover_effect button{
+.p-wrapper{
+    padding: 0 10vw;
+}
+.decouvrir_btn{
+    margin-left: 20 rem ;
+
+    
+}
+.decouvrir{
+    width: 10rem;
+    height: 3rem;
     padding: 10px;
-    background-color: #4E69C3;
-    border-radius: 5px;
-    border: none;
+    background-size: 100px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 10px;
+    border: none; 
 }
-.hover_effect button a{
-    color: #fff;
+.decouvrir:hover{
+    animation: animate 0.5s ease-out;
+}
+@keyframes animate {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 100px;
+    }
+}
+.decouvrir a{
+    color:white;
     text-decoration: none;
-
 }
-/* end styling index page */
-
-/* styling Sign_up page */
-
+.signup_btn{
+    width: 2.5rem;
+}
+h1{
+    text-align: center;
+}
+/* styling signup page */
 .SignUp_form{
     padding: 5% 0;
     flex-direction: column;
     background-color: #4E69C3; 
     border-radius: 20px;
     height: 20rem;
-    width: 60vw; 
+    width: 50vw; 
     margin: auto;
     display: flex;
     align-items: center;
@@ -167,7 +145,7 @@ section{
     text-align: center;
     border: none;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
     height: 3rem;
 }
  #login_btn{
@@ -175,6 +153,7 @@ section{
     background-color: #1D0E2C;
     color: #fff;
 } 
+
 /* styling club page */
 .club_container{
     margin:  auto 3rem;
@@ -182,7 +161,7 @@ section{
     flex-direction: column;
     gap: 2rem;
 }
-.club_title{
+ .club_title{
  
 width: 80vw;
 height: 3rem;
@@ -195,7 +174,7 @@ border-radius: 0px 90px 10px 0px;
 padding-top: 3px;
 }
 .img_club{
-    background-image: url(../image/event_of_week.png);
+    background-image: url(../image/art_club.png);
     background-repeat: no-repeat;
     width: 95%;
     background-position: center;
@@ -212,15 +191,33 @@ padding-top: 3px;
     margin-left: 82vw;
 }
 .demande_btn{
+    border: none;
     width: 6rem;
     height:2.5rem;
     padding: 2px;
     border-radius: 5px;
     border: none;
-    background-color: #2D2C5E;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    /* background-size: 400%; */
     color: white;
     font-weight: 500;
     letter-spacing: 1.5px;
+}
+.demande_btn:hover{
+    animation: animate 1s ease-in-out;
+}
+@keyframes animate {
+    0%{
+        background-position: 0rem;
+    }
+    100%{
+        background-position: 6rem;
+    }
+}
+.demande_btn a{
+    color: white;
+    text-decoration: none;
 }
 .about_club{
     display: flex;
@@ -254,8 +251,8 @@ padding-top: 3px;
 
 
 }
-.activite{
-    background: url(../image/activite.png);
+/* .activite{
+    background: url(../image/art_club.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -269,6 +266,9 @@ padding-top: 3px;
 .activite:hover { 
   background:#2d2c5ed5;
   opacity: 13;
+}
+h1{
+    text-align: center;
 }
 
 .activite{
@@ -297,4 +297,116 @@ padding-top: 3px;
 }  
 :is(.activite:hover) p{
     display: block;
- }  
+ }   */
+.galerie{
+    display:flex;
+}
+.activite{
+    width: 350px;
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+.activite img{
+    width: 350px;
+    height: 500px; 
+}
+.intro{
+    height: auto;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom:0;
+    background:#1D0E2C;
+    color: whiteee;
+}
+.intro h3{
+    text-align: center;
+    font-size: 40px;
+    color:white;
+}
+.intro p{
+    font-size: 20px;
+    visibility: visible;
+    display: none;
+   
+}
+.activite:hover{
+    cursor: pointer;
+    color: white;
+    transition: 2s;
+    transition-property: inherit;
+}
+.activite:hover .intro{
+height: 220px;
+
+background:#1D0E2C;
+}
+.activite:hover .activite p{
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+.activite:hover .intro p{
+    
+    display: block;
+}
+ 
+ /* styling demande page */
+.demande_form{
+    padding: 5% 0;
+    flex-direction: column;
+    background-color: #2D2C5E; 
+    border-radius: 20px;
+    height: 20rem;
+    width: 30vw; 
+    /* margin: auto; */
+    display: flex;
+     align-items: center; 
+    gap: 0.5rem;
+    
+}
+.demande_form input{
+    
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    width: 60%;
+     height: 7rem; 
+}
+ #login_btn{
+    width: 20%;
+    background-color: #0b1bcf;
+    color: #fff;
+} 
+
+.form{
+    background-image: url(../image/youcodefamily.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.demande_page{
+    overflow: hidden;
+    height: 100vh;
+}
+.demande_navbar{
+    position: absolute;
+}
+.form{
+    
+    height: 100%;
+}
+.img_log img{
+    border-radius:50%;
+    width: 5rem;
+    position: relative;
+    margin:-2rem;
+}
