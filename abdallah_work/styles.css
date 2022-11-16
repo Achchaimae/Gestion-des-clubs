@@ -5,22 +5,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}/* 
-.nav { grid-area: nav; }
-.clubs { grid-area: clubs;}
-.calender { grid-area: calender; background-color: greenyellow;}
-.todo { grid-area: todo; background-color: antiquewhite;}
- */body{
+}body{
     padding: 2vh;
     height: 100vh;
     background-color: #CFDCFF;
 }
 .main-container {
-    /* display: grid;
-    grid-template:
-        'nav clubs clubs clubs clubs clubs clubs clubs calender calender calender calender calender'
-        'nav clubs clubs clubs clubs clubs clubs clubs todo todo todo todo todo';
-    grid-gap: 3vh 5vw; */
     border-radius: 20px;
     padding: 30px;
     height: 96vh;
@@ -53,7 +43,6 @@ li{
     border-radius: 10px;
     background-color: #1D0E2C;
     position: fixed;
-    
 }
 i{
     color: white;
