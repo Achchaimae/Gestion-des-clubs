@@ -25,7 +25,7 @@
     padding: 30px;
     height: 96vh;
     position: relative;
-margin-left: 14vh;
+    margin-left: 14vh;
     /* background-color:white; */
     display: flex;
     justify-content: space-around;
@@ -80,12 +80,13 @@ h3{
 }
 .clubs h3{
  padding: 5px;
- color: white;
+ color: #1D0E2C;
 }
 .title{
     height: fit-content;
     width: 100%;
     padding: 10px;
+    border-radius: inherit;
     position:absolute;
     top: 0;
     right: 0;
@@ -99,22 +100,22 @@ h3{
     padding: 10px;
     border-radius: 10px;
     background-color: #43B0F1;
-    color: white;
-    transition: background-color 200ms ease-in-out;
+    fill: white;
+    transition: background-color 600ms ease-in-out;
 
 }
 .add-button:hover{
-    background-color: aqua;
-    transition: background-color 300ms ease-in-out;
+    background-color: #1D0E2C;
+    transition: background-color 600ms ease-in-out;
 }
 .title,.footer{
-    background-color: #1D0E2C;
+    background-color: white;
     z-index: 2;
 }
 
 .footer{
     height: fit-content;
-    
+    border-radius: inherit;
     width: 100%;
     padding: 5px;
     position:absolute;
@@ -152,8 +153,8 @@ h3{
    margin: 40px;
    box-sizing: content-box;
    position: relative;
-    border: 2px solid #1D0E2C;
-}
+/*     border: 2px solid #1D0E2C;
+ */}
 .club{
     background-color: #5E87F5;
     border-radius: 10px;
@@ -177,6 +178,7 @@ h3{
 /* right */
 .right{
     width: 30vw;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -186,18 +188,42 @@ h3{
     height: 300px;
     min-width: 300px;
     margin-bottom: 20px;
-    background-color: #1D0E2C;
+    background-color: white;
 }
 .todo{
-    background-color: #1D0E2C;
+    background-color: white;
     position: relative;
     height:fit-content;
     min-width: 250px;
 }
 .right h3{
-    color: white;
+    color: #1D0E2C;
 }
 
 .todo p{
     color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+        height: unset;
+    }
+}
+@media screen and (max-width: 415px) {
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+        height: unset;
+        padding: 0 30px;
+        margin-left: 10vh;
+    }
+    .nav{
+        width: 8vh;
+    }
+    .clubs{
+        margin: 0;
+        height: 50vh;
+    }
 }

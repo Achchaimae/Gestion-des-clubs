@@ -72,6 +72,10 @@ li{
     display: inline;
 
 } */
+h1,h2{
+    color: white;
+}
+
 .description{
     display: flex;
     height: fit-content;
@@ -143,6 +147,12 @@ li{
     background-color: transparent;
 /*     text-decoration: underline;
  */}
+ .right .modifier{
+    border-radius: 50%;
+ }
+ .description .modifier{
+    border-radius: 50%;
+ }
  .modifier:hover{
     background-color: #1D0E2C;
     transition: all 500ms ease-in-out;
@@ -205,7 +215,7 @@ h2,h1,th{
   #events td, #events th {
     border: 0.5px solid #1D0E2C;
     padding: 8px;
- 
+    white-space: wrap;
   }
 
   
@@ -218,8 +228,8 @@ h2,h1,th{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color:#1D0E2C;
-    color: white;
+    background-color:#CFDCFF;
+    color: #1D0E2C;
   }
 
 .modifier_event {
@@ -231,4 +241,15 @@ h2,h1,th{
 .modifier img{
     height: 14px;
     margin: auto auto;
+}
+
+.buttons-cell{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons-cell button{
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
 }
