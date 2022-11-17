@@ -77,6 +77,7 @@ width: 20vw;
 border-radius: 12px;
 }
 .abt_club{
+   
     text-align: center;
     font-weight: 500;
     display: flex;
@@ -88,29 +89,49 @@ border-radius: 12px;
     padding: 0 10vw;
 }
 .decouvrir_btn{
-    margin-left: 20 rem ;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
     
 }
+
+.button-background{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
 .decouvrir{
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
     width: 10rem;
     height: 3rem;
     padding: 10px;
     background-size: 100px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    border-radius: 10px;
-    border: none; 
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
 }
-.decouvrir:hover{
+:is(.decouvrir_btn:hover) .button-background{
+    animation: animatebg 0.5s ease-out;
+}
+/* .decouvrir:hover{
     animation: animate 0.5s ease-out;
-}
-@keyframes animate {
+} */
+@keyframes animatebg {
     0%{
-        background-position: 0;
+        left: -100;
     }
     100%{
-        background-position: 100px;
+        left: 0;
     }
 }
 .decouvrir a{
@@ -191,11 +212,15 @@ padding-top: 3px;
     display: flex;
     align-items: flex-end; 
 }
-.demande{
-    margin-top: 2rem;
-    margin-left: 82vw;
+/* .demande{
+    margin-left: auto;
+    margin-right: 2.5%;
+} */
+.decouvrir_btn{
+    margin-left: auto;
+    margin-right: 2.5%;
 }
-.demande_btn{
+/* .demande_btn{
     border: none;
     width: 6rem;
     height:2.5rem;
@@ -208,10 +233,10 @@ padding-top: 3px;
     color: white;
     font-weight: 500;
     letter-spacing: 1.5px;
-}
-.demande_btn:hover{
+} */
+/* .demande_btn:hover{
     animation: animate 1s ease-in-out;
-}
+} */
 @keyframes animate {
     0%{
         background-position: 0rem;
