@@ -8,6 +8,9 @@
 body{
 background-color: #E8EEF1;
 }
+main{
+    overflow: hidden;
+}
 
 section{
     margin-bottom: 2rem;
@@ -40,12 +43,6 @@ section{
 .event_desc{
     margin-left: 5rem;
     font-size: large;
-}
-.slider:hover{
-    transition: background-color 1s ease-in-out;
-    background-color:#4E69C3 ;
-    opacity: 0.8;
-    border-radius: 30px;
 }
 .shape{
     margin-right: -15%;
@@ -151,8 +148,16 @@ h1{
  #login_btn{
     width: 20%;
     background-color: #1D0E2C;
-    color: #fff;
-} 
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    width: 60%;
+    height: 3rem;
+}
+#login_btn a{
+    color:white;
+    text-decoration: none;
+}
 
 /* styling club page */
 .club_container{
@@ -227,20 +232,37 @@ padding-top: 3px;
     gap:2rem;
 }
 .club_desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: white;
     width: 60vw;
     border-radius: 20px;
     padding: 10px 10px;
+    gap: 20px;
 
+}
+.club_desc p{
+    text-align: center;
 }
 .club_membres{
     width: 30vw;
+    padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
 }
+
 .club_membres li{
     list-style-type: none;
+}
+.club_membre_info p{
+margin: 5px 0;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+height: 1em;
 }
 .galerie{
     display: flex;
@@ -249,7 +271,26 @@ padding-top: 3px;
    justify-content: space-evenly;
    gap: 2rem;
 
+}
+.club_membre{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
 
+.club_membres div{
+    width: 100%;
+}
+.club_membres hr{
+    width: 50%;
+    margin: 0 auto;
+}
+.club_membre img{
+    border-radius: 50%;
+    height:2.5rem;
+    width: auto;
 }
 /* .activite{
     background: url(../image/art_club.png);
@@ -302,35 +343,39 @@ h1{
     display:flex;
 }
 .activite{
-    width: 350px;
-    height: 500px;
+   
+    
     margin: 50px;
     box-shadow: 5px 5px 20px black;
     overflow: hidden;
     border-radius: 15px;
     position: relative;
 }
+
 .activite img{
-    width: 350px;
-    height: 500px; 
+    width: 250px;
+   
 }
 .intro{
     height: auto;
-    width: 350px;
+    width: 250px;
     padding: 6px;
     box-sizing: border-box;
     position: absolute;
     bottom:0;
     background:#1D0E2C;
-    color: whiteee;
+    color: white;
 }
+
+
 .intro h3{
     text-align: center;
-    font-size: 40px;
+    /* font-size: 40px; */
     color:white;
 }
 .intro p{
-    font-size: 20px;
+    text-align: center;
+    /* font-size: 20px; */
     visibility: visible;
     display: none;
    
@@ -338,13 +383,14 @@ h1{
 .activite:hover{
     cursor: pointer;
     color: white;
-    transition: 2s;
     transition-property: inherit;
+    
 }
-.activite:hover .intro{
-height: 220px;
-
-background:#1D0E2C;
+.activite:hover .intro
+{
+    height: 220px;
+    background:#1D0E2C;
+    
 }
 .activite:hover .activite p{
     opacity: 1;
