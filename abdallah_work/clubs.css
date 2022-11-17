@@ -87,6 +87,7 @@ h1,h2{
     min-height: 100px;
     resize: none;
     padding: 5px;
+    position: relative;
 }
 
 .header{
@@ -112,15 +113,17 @@ h1,h2{
     right: 5px;
 }
 .description button{
-    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     border: none;
     padding: 5px;
     border-radius: 8px;
 }
-.description button:hover{
+/* .description button:hover{
     background-color: #1D0E2C;
     transition: all 500ms ease-in-out;
-}
+} */
 .description button:hover i{
     color: white;
     transition: all 500ms ease-in-out;
@@ -193,6 +196,7 @@ h1,h2{
     flex-direction: column;
     align-items: flex-end;
     gap: 0.3vh;
+    position: relative;
 }
 .textarea .modifier{
     margin: unset;
