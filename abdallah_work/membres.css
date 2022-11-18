@@ -36,7 +36,7 @@ li{
     position: fixed;
     
 }
-i{
+.nav i{
     color: white;
     font-size: 1.3rem;
     margin: 0 10px;
@@ -132,21 +132,26 @@ i{
 }
 .right{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    width: 110px;
 }
 .right button{
     border: none;
     background-color: transparent;
+    
+   
 }
 
-.right .fa-solid{
-    padding: 5px;
+.right .fa-soli{
+    position: relative;
     border-radius: 50%;
     background-color: #1D0E2C;
-    font-size: 14px;
+    padding: 5px;
 }
+.right .fa-solid{
+    font-size: 15px;
+}
+
 button{
     cursor: pointer;
 }
