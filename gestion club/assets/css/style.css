@@ -30,16 +30,107 @@ section{
 .youcode_logo h3{
     font-family: 'Rock Salt';
 }
+/* styling slider */
+
+.section{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .slider{
+    background-color: #CFDCFF;
+    width: 100vw;
+    height: 500px;
+    /* border-radius: 12px; */
+    overflow: hidden;
+}
+.slide{
+    width:500%;
+    height: 500px;
+    display: flex;
+}
+.slide input{
+    display: none;
+}
+.st{
+    width: 20%;
+    transition: 1s;
+}
+
+.nav-m{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    justify-content: center;
+    display: flex;
+}
+.m-btn{
+    border: 2px solid #3D4B91;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    align-items: center;
+}
+.m-btn:not(:last-child){
+    margin-right: 30px;
+
+}
+.m-btn:hover{
+    background-color: #3D4B91;
+}
+#radio1:checked ~.first{
+    margin-left: 0%;
+}
+#radio2:checked ~.first{
+    margin-left: -20%;
+}
+#radio3:checked ~.first{
+    margin-left: -40%;
+}
+.nav_auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+.nav_auto div{
+    border: 2p solid #3D4B91;
+    padding: 5  px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.nav_auto div:not(:last-child){
+    margin-right: center;
+    justify-content: center;
+}
+#radio1:checked ~.nav_auto .a-b1{
+    background-color: #3D4B91;
+    
+}
+#radio1:checked ~.nav_auto .a-b2{
+    background-color: #3D4B91;
+
+}
+#radio1:checked ~.nav_auto .a-b3{
+    background-color: #3D4B91;
+
+}
+.my-slider{
     display: flex;
     flex-direction: row;
     width: 90%;
     justify-content: space-between;
     align-items:center;
     margin: 0 auto;
-     /* margin: 1rem; */
-     opacity: 1;
+    margin: 1rem;
+    opacity: 1; 
 }
+
+
 .event_desc{
     margin-left: 5rem;
     font-size: large;
@@ -47,6 +138,7 @@ section{
 .shape{
     margin-right: -15%;
     width: 50%;
+    height: 500px;
 
 }
 .event_img{
@@ -55,10 +147,45 @@ section{
     );
    -webkit-mask-repeat: no-repeat;
     width: 100%;
-
-    
-    
+   
 }
+.semaine_tag{
+    color: #0b1bcf;
+    position: left;
+}
+.slider_container{
+    padding: 1rem;
+     background-color:#CFDCFF;
+ 
+}
+.my-sliders{
+   
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-items:center;
+    margin: 0 auto;
+    margin: 1rem;
+    opacity: 1; 
+}
+.shapee{
+    width: 50%;
+
+}
+.event_infos{
+    font-size: 1.5rem;
+}
+.event_info p{  
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.eventt{
+    border-radius: 12px;
+    width: 100%;
+   
+}
+/* end styling slider */
+
 
 .clubs{
     display: flex;
@@ -230,10 +357,10 @@ padding-top: 3px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     /* background-size: 400%; */
-    color: white;
+    /* color: white;
     font-weight: 500;
     letter-spacing: 1.5px;
-} */
+}  */
 /* .demande_btn:hover{
     animation: animate 1s ease-in-out;
 } */

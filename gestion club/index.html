@@ -32,26 +32,108 @@
                  </a>
             </div>
         </section>
-        <section class="slider">
-            <div class="event_desc">
-                <div class="event_info">
-                    <h3>Calm Music Night</h3>
-                    <div>
-                        <p>
-                            Crée par : YouCode music’s Club
-                        </p>
-                        <p>
-                            Time : 16:00 , Jeudi 26 Novembre</p>
-                        <p>
-                            Lieu : YouCode Safi</p>
+        <section class="section">
+            <div class="slider">
+                <div class="slide">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+    
+                    <div class="st first">
+                        <div class="slider_container">
+                            <div class="my-sliders">
+                                <div class="event_desc">
+                                    <h1 class="semaine_tag">cette semaine</h1>
+                                    <div class="event_infos">
+                                        
+                                        <h3>Calm Music Night</h3>
+                                        <div class="infos"> 
+                                            <p>
+                                                Crée par : YouCode music’s Club
+                                            </p>
+                                            <p>
+                                                Time : 16:00 , Jeudi 26 Novembre</p>
+                                            <p>
+                                                Lieu : YouCode Safi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="shapee">
+                                    <img src="assets/image/gaming.png" alt="event_img" class="eventt">
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="st">
+                        <div class="slider_container">
+                            <div class="my-sliders">
+                                <div class="event_desc">
+                                    <h1 class="semaine_tag">cette semaine</h1>
+                                    <div class="event_infos">
+                                        
+                                        <h3>Calm Music Night</h3>
+                                        <div class="infos"> 
+                                            <p>
+                                                Crée par : YouCode music’s Club
+                                            </p>
+                                            <p>
+                                                Time : 16:00 , Jeudi 26 Novembre</p>
+                                            <p>
+                                                Lieu : YouCode Safi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="shapee">
+                                    <img src="assets/image/event_img.png" alt="event_img" class="eventt">
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="st">
+                        <div class="slider_container">
+                            <div class="my-sliders">
+                                <div class="event_desc">
+                                    <h1 class="semaine_tag">cette semaine</h1>
+                                    <div class="event_infos">
+                                        
+                                        <h3>Calm Music Night</h3>
+                                        <div class="infos"> 
+                                            <p>
+                                                Crée par : YouCode music’s Club
+                                            </p>
+                                            <p>
+                                                Time : 16:00 , Jeudi 26 Novembre</p>
+                                            <p>
+                                                Lieu : YouCode Safi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="shapee">
+                                    <img src="assets/image/robotiq_club.png" alt="event_img" class="eventt">
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="nav_auto">
+                        <div class="a-b1"></div>
+                        <div class="a-b2"></div>
+                        <div class="a-b3"></div>
+                        
                     </div>
                 </div>
+                <div class="nav-m">
+                    <label for="radio1" class="m-btn"></label>
+                    <label for="radio2" class="m-btn"></label>
+                    <label for="radio3" class="m-btn"></label>
+                </div>
             </div>
-            <div class="shape">
-                <img src="assets/image/event_img.png" alt="event_img" class="event_img">
-            </div>
+    
         </section>
-        <h1> YouCode clubs</h1>
+       
+        <h1> You <span style="color:blue ;">Code</span> clubs</h1>
         <section class="clubs">
             <div class="club_card">
                 <div class="club_img">
@@ -102,5 +184,15 @@
             </div>
         </section>
     </main>
+    <script type="text/javascript">
+        var counter=1;
+        setInterval(function(){
+            document.getElementById('radio'+counter).checked=true ;
+            counter++;
+            if(counter>3){
+                counter = 1;
+            }
+        },5000);
+    </script>
 </body>
 </html>
