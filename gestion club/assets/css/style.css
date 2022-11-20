@@ -197,6 +197,12 @@ section{
     justify-content: space-between;
     align-items:center;
     margin: 4rem;
+    padding: 2rem;
+}
+.club_card:hover{
+    background-color:#cfdcff96;
+    box-shadow: 5px 5px 5px #4e69c39d;
+    border-radius: 12px;
 }
 
 .club_img img{
@@ -296,6 +302,7 @@ h1{
  #login_btn{
     width: 20%;
     background-color: #1D0E2C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -499,14 +506,13 @@ h1{
     
     margin: 50px;
     box-shadow: 5px 5px 20px black;
-    /* s */
     border-radius: 15px;
     position: relative;
 }
 
 .activite img{
     width: 250px;
-   
+    border-radius: 15px;
 }
 .intro{
     height: auto;
@@ -517,6 +523,7 @@ h1{
     bottom:0;
     background:#1D0E2C;
     color: white;
+    border-radius: 0 0 15px 15px ;
 }
 
 
