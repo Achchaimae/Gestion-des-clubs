@@ -1,0 +1,259 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}/* 
+.nav { grid-area: nav; }
+.clubs { grid-area: clubs;}
+.calender { grid-area: calender; background-color: greenyellow;}
+.todo { grid-area: todo; background-color: antiquewhite;}
+ */body{
+    padding: 1rem;
+    /* height: 100vh;
+    width: 100vw; */
+    background-color: #CFDCFF;
+}
+.main-container {
+    /* display: grid;
+    grid-template:
+        'nav clubs clubs clubs clubs clubs clubs clubs calender calender calender calender calender'
+        'nav clubs clubs clubs clubs clubs clubs clubs todo todo todo todo todo';
+    grid-gap: 3vh 5vw; */
+    margin-left: 16vh;
+    margin-top: 8vh;
+    margin-right: 8vh;
+    margin-bottom: 8vh;
+    padding: 4vh;
+    /* height: 84vh; */
+    background-color: #5E87F5;
+    border-radius: 10px;
+    
+    display: flex;
+    gap: 4vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* nav bar */
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+    width: 4rem;
+}
+li{
+    list-style: none;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 96vh;
+    width: 10vh;
+    padding: 60px 0;
+    border-radius: 10px;
+    background-color: #1D0E2C;
+    position: fixed;
+    
+}
+.nav i{
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 10px;
+}
+
+/*  */
+/* .description h2{
+    display: inline;
+
+} */
+h1,h2{
+    color: white;
+}
+
+.description{
+    display: flex;
+    height: fit-content;
+    gap: 5%;
+}
+
+.description textarea{
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    padding: 5px;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* margin: 5% 0; */
+}
+.main-container p{
+    color: white;
+}
+.right .modifier i{
+
+    font-size: 15px;
+}
+.right .modifier{
+    background: none;
+    border: none;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    bottom: 0px;
+    right: 5px;
+}
+.description button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+}
+/* .description button:hover{
+    background-color: #1D0E2C;
+    transition: all 500ms ease-in-out;
+} */
+.description button:hover i{
+    color: white;
+    transition: all 500ms ease-in-out;
+}
+ .modifier:hover i{ 
+    color: white;
+    transition: all 500ms ease-in-out;
+}
+.fa-solid{
+    color: #1D0E2C;
+    font-size: 15px;
+}
+.modifier{
+    display: block;
+    margin: 10px 0 0 auto;
+    padding: 5px 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #1D0E2C;
+    background-color: transparent;
+/*     text-decoration: underline;
+ */}
+ .right .modifier{
+    border-radius: 50%;
+ }
+ .description .modifier{
+    border-radius: 50%;
+ }
+ .modifier:hover{
+    background-color: #1D0E2C;
+    transition: all 500ms ease-in-out;
+ }
+.right{
+    position: relative;
+}
+.logo{
+    height: 80px;
+    width: 80px;
+    background-color: #CFDCFF;
+    border-radius: 50%;
+}
+
+
+.member_count{
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+.representant{
+    display: inline-block;
+    
+}
+.representant_name{
+    display: inline-block;
+    text-transform: capitalize;
+}
+.club_name{
+    display: inline-block;
+}
+.member_count{
+    display: inline-block;
+}
+
+.textarea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3vh;
+    position: relative;
+}
+.textarea .modifier{
+    margin: unset;
+}
+.textarea .fa-solid{
+    cursor: pointer;
+    font-size: 15px;
+}
+h2,h1,th{
+    text-transform: capitalize;
+}
+/* evenets */
+
+#events {
+
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #events td, #events th {
+    border: 0.5px solid #1D0E2C;
+    padding: 8px;
+    white-space: wrap;
+  }
+
+  
+  #events tr:nth-child(even){background-color: #f2f2f2;}
+  #events tr:nth-child(odd){background-color: #fff;}
+  
+  #events tr:hover {background-color: #ddd;}
+  
+  #events th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#CFDCFF;
+    color: #1D0E2C;
+  }
+
+.modifier_event {
+    background-color: #5E87F5;
+}
+/* .left,.middle{
+    width: min-content;
+} */
+.modifier img{
+    height: 14px;
+    margin: auto auto;
+}
+
+.buttons-cell{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons-cell button{
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
