@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link style -->
-    <link rel="stylesheet" href="css/userstyle.css">
+    <link rel="stylesheet" href="views/css/userstyle.css">
       <!-- link a font style -->
          <!-- Poppins font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -27,7 +27,7 @@
                 <h3>Clubs</h3>
             </div>
             <div>
-                 <a href="../signup.php">
+                 <a href="signup.php">
                     <img src="image/Sign_up.png" alt="signup"class="signup_btn">
                  </a>
             </div>
@@ -145,7 +145,7 @@
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/user interface/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/user interface/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/user interface/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>

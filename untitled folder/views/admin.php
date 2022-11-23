@@ -1,9 +1,15 @@
 <?php
 
+
 require_once PROJ_DIR . "/views/header.php";
 
+
 ?>
-<link rel="stylesheet" href="views/css/styles.css">
+<style>
+@import url(PROJ_DIR . "views/css/styles.css");
+</style>
+
+<link rel="stylesheet" type="text/css" href="views/css/styles.css" >
 <div class="main-container">
         
         <div class="clubs">

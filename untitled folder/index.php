@@ -21,7 +21,7 @@ if(isset($_GET['c'])){
         if(isset($_GET['a'])){
             if($_GET['a'] === "newClubForm"){
                 $clubCtl->newClubForm();  
-               
+            
                 return;
             }
             if($_GET['a'] === "createNewClub"){
@@ -67,13 +67,9 @@ if(isset($_GET['c'])){
     $signupmld->signup($_POST['login'],$_POST['password']) ;
     } 
 } //global variable is not set
-// else {
-        //header('Location: ./admin.php'); 
-        // $clubCtl->getmembers(13);
-        /* $Viewcls->updateAdmin(); */
-
-/*         require_once PROJ_DIR . "/views/admin.php"; 
-//  }
+ else {
+        require_once PROJ_DIR . "/views/home.php"; 
+    }
 
 /* $result = $Todo->fetchall();
       var_dump($result); */

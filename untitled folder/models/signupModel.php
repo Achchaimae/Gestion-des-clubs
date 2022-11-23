@@ -15,7 +15,9 @@ class signupModel extends dbh{
         if($results){
             //password & login exist
             $test = array_values($results); 
-            header('location: ../views/user interface/demande.php');
+         // header('location: ../views/admin.php');
+        require_once PROJ_DIR . "/views/admin.php";
+        
             return $test[0]; //returns number of members in an array
                 }
                 else 
