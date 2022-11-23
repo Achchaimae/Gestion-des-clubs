@@ -11,7 +11,7 @@ class ClubsContr {
     }
 
     public function newClubForm(){
-        require_once PROJ_DIR . "/views/clubs/create.php";
+        require_once PROJ_DIR . "/views/pages/create.php";
         
         /* if(isset($_post["nom"])) */
             /* $this->model->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"]); */
@@ -31,7 +31,7 @@ class ClubsContr {
             $id = intval($_GET["id"]);
             //Get one club
             $club = $this->model->getClub($id);
-            require_once PROJ_DIR . "/views/clubs/edit.php";
+            require_once PROJ_DIR . "/views/pages/edit.php";
             return;
         } else {
             die("Id is required");

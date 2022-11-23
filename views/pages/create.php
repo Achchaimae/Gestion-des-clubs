@@ -1,5 +1,5 @@
 <?php
-require_once PROJ_DIR . "/views/header.php";
+require_once PROJ_DIR . "/includes/header.php";
 
 ?>
 
@@ -17,5 +17,5 @@ require_once PROJ_DIR . "/views/header.php";
     </div>
 
 <?php
-require_once PROJ_DIR . "/views/footer.php";
+require_once PROJ_DIR . "/includes/footer.php";
 ?>

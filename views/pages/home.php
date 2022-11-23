@@ -7,7 +7,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
     <main>
         <section class="navbar">
             <div class="youcode_logo">
-                <a href="#"><img src="image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="#"><img src="views/image/youcode_logo.png" alt="youcode_logo"></a>
                 
                 <h3>Clubs</h3>
             </div>

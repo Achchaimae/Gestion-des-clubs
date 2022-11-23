@@ -21,5 +21,8 @@ class signupModel extends dbh{
                     }
        
     }
+    /* public function verifylogin($admin){
+        isset($_SESSION[$admin]);
+    } */
 }
 ?>

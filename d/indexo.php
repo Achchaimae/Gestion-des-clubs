@@ -1,3 +1,4 @@
+    <?php
     if($_GET['c'] === "Clubs"){
 
         
@@ -47,7 +48,7 @@
 } //global variable is not set
 else {
         //header('Location: ./admin.php'); 
-        $Viewcls->updateAdmin(); 
+        unset($_SESSION["admin"]);
         
 /*         require_once PROJ_DIR . "/views/admin.php"; 
  */}

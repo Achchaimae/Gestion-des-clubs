@@ -18,6 +18,7 @@
 <body>
     <div class="nav">
         <ul>
+            
             <li><a href="./index.php"><i class="fa-solid fa-house"></i></a></li>
             <li><a href="./membres.html"><i class="fa-solid fa-user"></i></a></li>
             <li><i class="fa-solid fa-bell"></i></li>
@@ -27,3 +28,4 @@
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </a>
     </div>
+    

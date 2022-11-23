@@ -42,7 +42,7 @@ require_once PROJ_DIR . "/includes/header.php";
         <div class="right">
         
         <?php
-      require_once PROJ_DIR . "/calendar.php";
+      require_once PROJ_DIR . "/views/pages/calendar.php";
 ?>
 
         <div class="todo">
