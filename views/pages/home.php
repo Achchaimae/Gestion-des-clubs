@@ -13,7 +13,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
             </div>
             <div>
                  <a href="?c=log&a=login">
-                    <img src="image/Sign_up.png" alt="signup"class="signup_btn">
+                    <img src="views/image/Sign_up.png" alt="signup"class="signup_btn">
                  </a>
             </div>
         </section>
@@ -45,7 +45,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                                 </div>
                                 
                                 <div class="shapee">
-                                    <img src="image/gaming.png" alt="event_img" class="eventt">
+                                    <img src="views/image/gaming.png" alt="event_img" class="eventt">
                                 </div>
                             </div>
                             </div>
@@ -71,7 +71,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                                 </div>
                                 
                                 <div class="shapee">
-                                    <img src="image/event_img.png" alt="event_img" class="eventt">
+                                    <img src="views/image/event_img.png" alt="event_img" class="eventt">
                                 </div>
                             </div>
                             </div>
@@ -97,7 +97,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                                 </div>
                                 
                                 <div class="shapee">
-                                    <img src="image/robotiq_club.png" alt="event_img" class="eventt">
+                                    <img src="views/image/robotiq_club.png" alt="event_img" class="eventt">
                                 </div>
                             </div>
                             </div>
@@ -122,7 +122,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
         <section class="clubs">
             <div class="club_card">
                 <div class="club_img">
-                    <img src="image/gaming_club.png" alt="club image">
+                    <img src="views/image/gaming_club.png" alt="club image">
                 </div>
                 <div class="abt_club">
                     <div class="p-wrapper">
@@ -130,7 +130,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
 
             <div class="club_card">
                 <div class="club_img">
-                    <img src="image/gaming_club.png" alt="club image">
+                    <img src="views/image/gaming_club.png" alt="club image">
                 </div>
                 <div class="abt_club">
                     <div class="p-wrapper">
@@ -146,7 +146,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
 
             <div class="club_card">
                 <div class="club_img">
-                    <img src="image/gaming_club.png" alt="club image">
+                    <img src="views/image/gaming_club.png" alt="club image">
                 </div>
                 <div class="abt_club">
                     <div class="p-wrapper">
@@ -162,7 +162,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>

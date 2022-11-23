@@ -28,7 +28,7 @@
         <section class="navbar">
             <div class="youcode_logo">
                 <a href="../index.html">
-                    <img src="../assets/image/youcode_logo.png" alt="youcode_logo">
+                    <img src="views/image/youcode_logo.png" alt="youcode_logo">
                 </a>
           <h3>Clubs</h3>
             </div>
