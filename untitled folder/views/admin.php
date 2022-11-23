@@ -7,7 +7,7 @@ require_once PROJ_DIR . "/views/header.php";
 <div class="main-container">
         
         <div class="clubs">
-
+      
             <div class="title">
               <h3>Clubs</h3>
               <a href="?c=Clubs&a=newClubForm">
@@ -26,7 +26,11 @@ require_once PROJ_DIR . "/views/header.php";
                     <div class="club" role="button">
                         <div class="infos">
                             <h4 class="club_name"> <?php echo $value["nom"]; ?></h4>
-                            <p class="members">members: 16</p>
+                            <p class="members">
+                                members: <?php  
+                                print_r($this->model->getClubMembersCount($value["id"])) ;
+                                ?>
+                            </p>
                         </div>
                         <img src="" alt="" class="logo">
                     </div>

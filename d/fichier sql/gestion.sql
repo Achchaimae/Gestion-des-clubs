@@ -1,6 +1,6 @@
 create database gestion;
 use gestion;
-drop table club;
+
 create table club(
 id int not null auto_increment,
 primary key(id),
@@ -10,7 +10,7 @@ logo blob,
 date_creation  date,
 description text
 );
-drop table apprenant; 
+
 create table apprenant(
 id_apprenant int not null auto_increment,
 primary key(id_apprenant),
@@ -19,7 +19,7 @@ class tinytext,
 age int,
 email tinytext
 );
-drop table evenement;
+
 create table evenement (
 id int not null auto_increment primary key,
 id_club int not null,
@@ -29,7 +29,7 @@ event_date date,
 lieu tinytext,
 description text
 );
-drop table membre;
+
 create table membre(
 id_membre int not null,
 foreign key (id_membre) references apprenant(id_apprenant),
@@ -37,8 +37,8 @@ foreign key (id_membre) references apprenant(id_apprenant),
  id_club int not null,
 foreign key (id_club) references club(id)
 );
-drop table admin;
-create table admin(
+
+create table amin(
 id int not null auto_increment primary key,
 login tinytext,
 password text

@@ -24,11 +24,7 @@ class ClubsContr {
         return;
     }
    
-    public function getmembers($id){
-     
-         $this->model->getmembers($id);
-        return;
-    }
+    
    
     public function editClub(){
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){

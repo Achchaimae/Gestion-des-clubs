@@ -16,12 +16,14 @@ class ViewsClass {
 
     public function updateAdmin(){
         //Get List
-        $listtodos = $this->model->listClubs();
         $listclubs = $this->todo->listTodo();
+        $listtodos = $this->model->listClubs();
         
-        require_once PROJ_DIR . "/views/admin.php";
-         
+       require_once PROJ_DIR . "/views/admin.php";
+       
         return ;
     }
+   
+    
 
 } 
