@@ -29,20 +29,19 @@ class ClubModel extends dbh{
       /*  return $stmt; */
     }
 
-    public function getMembers($id_club){
+    // public function getMembers($id_club){
         
-        // this function returns associatuve array of club member_ids
-        $sql = "select id_membre from membre where id_club=$id_club";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute();
-        $results = $stmt->fetch();  
+    //     // this function returns associatuve array of club member_ids
+    //     $sql = "select id_membre from membre where id_club=$id_club";
+    //     $stmt = $this->connect()->prepare($sql);
+    //     $stmt->execute();
+    //     $results = $stmt->fetch();  
 
-        $test = array_values($results);
+    //     $test = array_values($results);
 
-        echo $test[0];
-
-        return $results;
-    }
+    //     return $results;
+    // }
+   
 } 
 
 

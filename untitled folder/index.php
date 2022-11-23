@@ -5,10 +5,13 @@ define("PROJ_DIR", dirname(__FILE__));
 include './classes/TodoContr.class.php';
 include './classes/ClubsContr.class.php';
 include './classes/ViewsClass.php';
+include './models/signupModel.php';
+
 
 $clubCtl = new ClubsContr();
 $TodoCtl = new TodoContr();
 $Viewcls = new ViewsClass();
+$signupmld = new signupModel();
 
 if(isset($_GET['c'])){
    
@@ -46,6 +49,8 @@ if(isset($_GET['c'])){
         
       $TodoCtl->addNewTodo($_POST["task"]);
     }
+
+   
       /*   if($_GET['a'] === "list"){
         
       $TodoCtl->showTodo();
@@ -56,15 +61,19 @@ if(isset($_GET['c'])){
         $TodoCtl->deleteTodo();
          
       }
+     
 } 
+ else if( $_GET['c'] === "login"){
+    $signupmld->signup($_POST['login'],$_POST['password']) ;
+    } 
 } //global variable is not set
-else {
+// else {
         //header('Location: ./admin.php'); 
-        $clubCtl->getmembers(13);
+        // $clubCtl->getmembers(13);
         /* $Viewcls->updateAdmin(); */
 
 /*         require_once PROJ_DIR . "/views/admin.php"; 
- */}
+//  }
 
 /* $result = $Todo->fetchall();
       var_dump($result); */

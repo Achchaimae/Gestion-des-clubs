@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    
+  
     <!-- linking css style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/userstyle.css">
     <!-- end linking css style -->
     
     <!-- link a font style -->
@@ -20,27 +19,29 @@
          <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">  
              <!-- end linking a font style -->
     <title>YouCode Clubs</title>
-    <link rel="icon" type="image/x-icon" href="../assets/image/icon_web.png">
+    <link rel="icon" type="image/x-icon" href="icon_web.png">
 </head>
-
 <body>
-    <main>
-        <section class="navbar">
+    <main class="demande_page">
+        <section class="navbar demande_navbar">
             <div class="youcode_logo">
-                <a href="../index.html">
-                    <img src="../assets/image/youcode_logo.png" alt="youcode_logo">
-                </a>
-          <h3>Clubs</h3>
+                <a href="../admin.php"><img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
+                
+                <h3>Clubs</h3>
             </div>
-            
         </section>
-        <section>
-            <form action="#" class="SignUp_form">
-                <input type="email" name="login" placeholder="LOGIN">
-                <input type="password" name="password" placeholder="PASSWORD">
-                <!-- <input type="submit" value="login" id="login_btn"> -->
-                <button type="submit" value="login" id="login_btn"><a href="admin.html">login</a></button>
-            </form>
+        <section class="form">
+                <div class="img_log">
+                    <img src="../image/login_man.png" alt="">
+                </div>
+                <form action="#" class="demande_form">
+                    <input type="text" name="Full name" placeholder="FULL NAME">
+                    <input type="date" name="age" placeholder="AGE">
+                    <input type="email" name="email" placeholder="EMAIL">
+                    <input type="text" name="password" placeholder="CLASSE">
+                    <input type="submit" value="envoyer" id="login_btn">
+                </form>
+            
         </section>
     </main>
 </body>

@@ -27,7 +27,7 @@
                 <h3>Clubs</h3>
             </div>
             <div>
-                 <a href="pages/signup.html">
+                 <a href="../signup.php">
                     <img src="image/Sign_up.png" alt="signup"class="signup_btn">
                  </a>
             </div>
