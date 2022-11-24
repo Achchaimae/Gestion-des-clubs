@@ -23,7 +23,8 @@ email tinytext
 create table evenement (
 id int not null auto_increment primary key,
 id_club int not null,
-foreign key (id_club) references club(id),
+foreign key (id_club) references club(id) ON DELETE CASCADE  Or 
+On delete set  null,
 nom tinytext,
 event_date date,
 lieu tinytext,
@@ -35,7 +36,8 @@ id_membre int not null,
 foreign key (id_membre) references apprenant(id_apprenant),
  role tinytext,
  id_club int not null,
-foreign key (id_club) references club(id)
+foreign key (id_club) references club(id) ON DELETE CASCADE  Or 
+On delete set  null
 );
 
 create table amin(

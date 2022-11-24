@@ -38,7 +38,10 @@ class ClubsContr {
         }
         
     }
+   
     
+    
+
     public function index(){
         //var_dump(PROJ_DIR);
         //require_once PROJ_DIR . "/views/clubs/index.php";

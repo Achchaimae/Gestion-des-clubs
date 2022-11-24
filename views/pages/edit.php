@@ -1,19 +1,18 @@
 <?php
-require_once PROJ_DIR . "/views/header.php";
+require_once PROJ_DIR . "/includes/header.php";
 ?>
 
 <link rel="stylesheet" href="views/css/clubs.css">
 
 <div class="main-container">
-        
+        <form action="?c=Clubs&a=save&id=<?php echo $club["id"]; ?>" method="post" id="clubform">
         <div class="header">
             <div class="left">
                 <h1 class="club_name"><?php echo $club["nom"]; ?></h1>
                 <p class="member_count">members: 
                 <?php  
-                                $this->model->getClubMembersCount($club["id"]);
+                               echo $this->model->getClubMembersCount($club["id"]);
                 ?>
-
                 </p>
                 <button class="modifier">modifier</button>
             </div>
@@ -31,15 +30,16 @@ require_once PROJ_DIR . "/views/header.php";
         <div class="description">
             <h2>description:</h2>
             <div class="textarea"></i>
-                <textarea name="" id="" ><?php echo $club["description"]; ?></textarea>
-                <button class="modifier">
-                    <i class="fa-solid fa-pen"></i>
+                <textarea name="description" form="clubform" ><?php echo $club["description"]; ?></textarea>
+                <button type="submit" class="modifier">
+                    <i class="fa-solid fa-save"></i>
                 </button>
 
             </div>
         </div>
+        </form>
         <div class="events">
-            <h2>events:</h2>
+   <!--          <h2>events:</h2>
 
             <table id="events" class="events-table">
             <tr>
@@ -61,14 +61,17 @@ require_once PROJ_DIR . "/views/header.php";
                     </div>
                 </td>
             </tr>
-            
+             -->
             
             
             
             </table>
-            <button class="modifier">Ajouter</button>
+            <a href="?c=Clubs&a=save&id=<?php echo $club["id"]; ?>">
+            <button class="modifier">Sauvegarder</button></a>
+            <a href="?c=Clubs&a=delete&id=<?php echo $club["id"]; ?>">
+            <button  class="modifier">supprimer</button></a>
         </div>
     </div>
 <?php
-require_once PROJ_DIR . "/views/footer.php";
+require_once PROJ_DIR . "/includes/footer.php";
 ?>

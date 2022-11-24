@@ -38,17 +38,32 @@ class ClubModel extends dbh{
 
         return $stmt;
     }
+
     public function getClubMembersCount($id){
-        
         
         $result= $this->getClubMembers($id);
         $clubMembers= $result->rowCount();
     
         return $clubMembers;
-                
+    }
+    
+    public function deleteClub($id){
+
+            $sql = "delete from club where id=$id";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
         
-        
-} 
+    }
+
+    public function saveClub(){
+            $description= $_POST["description"]; 
+            $id=$_GET["id"];
+            $sql = "update club SET description= '$description' WHERE id=$id";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
+            
+        }
+    
 } 
 
 

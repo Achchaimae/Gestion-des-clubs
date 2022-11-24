@@ -15,6 +15,9 @@
     width: 100vw; */
     background-color: #CFDCFF;
 }
+a:-webkit-any-link {
+    text-decoration: none;
+}
 .main-container {
     /* display: grid;
     grid-template:

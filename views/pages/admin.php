@@ -27,9 +27,8 @@ require_once PROJ_DIR . "/includes/header.php";
                         <div class="infos">
                             <h4 class="club_name"> <?php echo $value["nom"]; ?></h4>
                             <p class="members">
-                                members: <?php  
-                                print_r($this->model->getClubMembersCount($value["id"])) ;
-                                ?>
+                                members: 
+                               
                             </p>
                         </div>
                         <img src="" alt="" class="logo">
@@ -74,5 +73,5 @@ require_once PROJ_DIR . "/includes/header.php";
     </div>
     </div>
 <?php
-require_once PROJ_DIR . "/views/footer.php";
+require_once PROJ_DIR . "/includes/footer.php";
 ?>
