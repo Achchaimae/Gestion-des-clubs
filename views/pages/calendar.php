@@ -26,6 +26,9 @@
             <div>sat</div>
         </div>
         <div class="calendar-days">
+         
+       
+    
             <div>
                 1
                 <span></span>
@@ -76,13 +79,18 @@
     </div>
    </div>
    <div>
+   <div id="data">
+        <?php  foreach($listEvent as $key=>$value){
+             echo $value["nom"]; echo " le: ";
+            echo $value["event_date"];
+        ?><br>
+                 <?php    
+        } 
+        ?>
+     
+        </div>
    </div>
-   <?php  foreach($listEvent as $key=>$value){
-     echo $value["event_date"];
-
-                                 
-   } 
-    ?>
+  
 </section>
    <script src="script.js"></script>
 </body>

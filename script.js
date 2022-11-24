@@ -47,7 +47,6 @@ let first_day = new Date(year, month, 1)
             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
                 day.classList.add('curr-date')
             }
-           
         }
         calendar_days.appendChild(day)
     }
@@ -79,3 +78,17 @@ let curr_month ={value:currDate.getMonth()}
 let curr_year ={value:currDate.getFullYear()}
 generateCalendar(curr_month.value,curr_year.value)
 
+
+
+window.addEventListener("load", (event) => {
+    let event_date=document.querySelector("#data").innerHTML;
+alert("there is event in :"+event_date);
+  });
+
+
+
+
+
+
+
+        
