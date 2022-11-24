@@ -34,11 +34,11 @@
                 <div class="img_log">
                     <img src="../assets/image/login_man.png" alt="">
                 </div>
-                <form action="#" class="demande_form">
-                    <input type="text" name="Full name" placeholder="FULL NAME">
+                <form action="" class="demande_form">
+                    <input type="text" name="name" placeholder="FULL NAME">
                     <input type="date" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">
-                    <input type="text" name="password" placeholder="CLASSE">
+                    <input type="text" name="classe" placeholder="CLASSE">
                     <input type="submit" value="envoyer" id="login_btn">
                 </form>
             
