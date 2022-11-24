@@ -75,6 +75,14 @@
         <div class="month-list"></div>
     </div>
    </div>
+   <div>
+   </div>
+   <?php  foreach($listEvent as $key=>$value){
+     echo $value["event_date"];
+
+                                 
+   } 
+    ?>
 </section>
    <script src="script.js"></script>
 </body>

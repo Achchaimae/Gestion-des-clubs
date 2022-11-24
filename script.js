@@ -29,32 +29,10 @@ generateCalendar = (month, year) => {
 
     let currDate = new Date()
 
+
     month_picker.innerHTML = month_names[month]
     calendar_header_year.innerHTML = year
 // get first day of month
-
-
-
-//lhma9 b 3aynih fe had lcode jazhguahgyah
-//     let first_day=new Date( year ,month  , 1)
-
-//     for (let i = 0; i <= days_of_month[month] +first_day.getDay()-1; i++) {
-//        let day=document.createElement('div')
-//        if(i>=first_day.getDay()){
-//             day.classList.add('calendar-day-hover')
-//             day.innerHTML = i - first_day.getDay() + 1
-//             day.innerHTML += `<span><\span>
-//                               <span><\span>
-//                               <span><\span>
-//                               <span><\span>`
-//             if(i - first_day.getDay()+1 ===currDate.getDate() && year===currDate.getFullYear() && month === currDate.getMonth()){
-//                 day.classlist.add('curr-date')
-//             }
-//         } 
-//         calendar_days.appendChild(day)
-//     }
-// }
-// t7t khdam wa bhalo anare
 let first_day = new Date(year, month, 1)
 
     for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
@@ -69,6 +47,7 @@ let first_day = new Date(year, month, 1)
             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
                 day.classList.add('curr-date')
             }
+           
         }
         calendar_days.appendChild(day)
     }

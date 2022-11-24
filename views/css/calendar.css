@@ -276,3 +276,11 @@ section{
     }
 
 }
+.calendar-days div.event-date{
+    background-color:red;
+    color: var(--white);
+    border-radius: 8px;
+}
+.calendar-days div.event-date span{
+    display: none;
+}

@@ -74,5 +74,5 @@ require_once PROJ_DIR . "/includes/header.php";
     </div>
     </div>
 <?php
-require_once PROJ_DIR . "/views/footer.php";
+require_once PROJ_DIR . "/includes/footer.php";
 ?>

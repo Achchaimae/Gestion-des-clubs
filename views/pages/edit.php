@@ -1,5 +1,5 @@
 <?php
-require_once PROJ_DIR . "/views/header.php";
+require_once PROJ_DIR . "/includes/header.php";
 ?>
 
 <link rel="stylesheet" href="views/css/clubs.css">
