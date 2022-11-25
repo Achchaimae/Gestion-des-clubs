@@ -27,7 +27,7 @@ class ClubModel extends dbh{
       /*  return $stmt; */
     }
 
-    public function getClubMembers($id_club){
+    public function getClubMembersID($id_club){
         
         // this function returns associatuve array of club member_ids
         $sql = "select id_membre from membre where id_club=$id_club";
@@ -38,10 +38,45 @@ class ClubModel extends dbh{
 
         return $stmt;
     }
+    public function getClubMembersRows($id_club){
+        
+        // this function returns associatuve array of club member_ids
+        $sql = "select * from membre where id_club=$id_club";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchall();  
+        /* $clubMembers = $stmt->fetchall();   */
+
+        return $result;
+    }
+    public function getClubRepID($id_club){
+        
+        // this function returns associatuve array of club member_ids
+        $sql = "select rep from club where id=$id_club";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        /* $stmt->fetchall();  */
+        /* $clubMembers = $stmt->fetchall();   */
+        $result=$stmt->fetch();
+        return $result["rep"];
+    }
+    public function getClubRepName($id_club){
+        $id_member = $this->getClubRepID($id_club);
+        // this function returns associatuve array of club member_ids
+        $sql = "select nom_complet from membre where id_membre=$id_member";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        /* $stmt->fetchall();  */
+        /* $clubMembers = $stmt->fetchall();   */
+        $result=$stmt->fetch();
+        if (isset($result["nom_complet"])) {
+            return $result["nom_complet"];
+        }else return 'pas encors'; // put this back 
+    }
 
     public function getClubMembersCount($id){
         
-        $result= $this->getClubMembers($id);
+        $result= $this->getClubMembersID($id);
         $clubMembers= $result->rowCount();
     
         return $clubMembers;
@@ -55,9 +90,9 @@ class ClubModel extends dbh{
         
     }
 
-    public function updateClub($nom,$description,$id){
+    public function updateClub($nom,$description,$id,$newrepID){
        
-            $sql = "update club SET nom= '$nom',description='$description' WHERE id=$id";
+            $sql = "update club SET nom= '$nom',description='$description',rep=$newrepID WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
             return $id;

@@ -19,7 +19,7 @@ require_once PROJ_DIR . "/includes/header.php";
             </div>
             <div class="middle">
                 <h2 class="representant">represantant:</h2>
-                <p class="representant_name"> achchaimae khalaf</p>
+                <p class="representant_name"> <?php echo $repName; ?></p>
                 <!-- <button class="modifier">modifier</button> -->
             </div>
             <div class="right">

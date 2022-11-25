@@ -6,7 +6,7 @@ require_once PROJ_DIR . "/includes/header.php";
 
 <div class="main-container">
         <form  action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="POST" id="clubform" name="clubform">
-        
+
         <div class="header">
             <div class="left">
                 <input type="text" name="nom" value="<?php echo $club["nom"]; ?>">
@@ -20,7 +20,15 @@ require_once PROJ_DIR . "/includes/header.php";
             </div>
             <div class="middle">
                 <h2 class="representant">represantant:</h2>
-                <p class="representant_name"> achchaimae khalaf</p>
+                <!-- <p class="representant_name"> achchaimae khalaf</p> -->
+                <select name="newrep" id="cars">
+
+
+                <?php foreach($clubMembers as $key=>$value){ ?>
+                    <option value="<?php echo $value["id_membre"]; ?>"><?php echo $value["nom_complet"]; ?></option>
+                <?php } ?>
+
+                </select>
                 <!-- <button class="modifier">modifier</button> -->
             </div>
             <div class="right">

@@ -52,6 +52,8 @@ if($_SESSION["login"] === 'admin') {
                         $id = intval($_GET["id"]);
                         //Get one club
                         $club = $ClubMdl->getClub($id);
+                        $repName = $ClubMdl->getClubRepName($id);
+                        
                         require_once PROJ_DIR . "/views/pages/showclub.php";
                     
                 }
@@ -60,16 +62,29 @@ if($_SESSION["login"] === 'admin') {
                         $id = intval($_GET["id"]);
                         //Get one club
                         $club = $ClubMdl->getClub($id);
+                        $clubMembers = $ClubMdl->getClubMembersRows($id);
                         require_once PROJ_DIR . "/views/pages/editclub.php";
                 }
                 else if($_GET['a'] === "save"){
                     
                     $nom= $_POST["nom"]; 
                     $description= $_POST["description"]; 
+                    $newrepID= $_POST['newrep'];
                     $id=$_GET["id"];
-                    $ClubMdl->updateClub($nom,$description,$id);
+                    $ClubMdl->updateClub($nom,$description,$id,$newrepID);
                     header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
                 }
+                else if($_GET['a'] === "test"){
+                    
+                    require_once PROJ_DIR . "/views/pages/xxx.php";
+                    
+                    $repName = $ClubMdl->getClubMembersCount(1);
+
+                    echo $repName;
+                    
+                    
+                }
+
             }
             
         }else if($_GET['c'] === "todo"){
