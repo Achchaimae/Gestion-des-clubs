@@ -12,9 +12,26 @@ require_once PROJ_DIR . "/includes/users_header.php";
                 <h3>Clubs</h3>
             </div>
             <div>
-                 <a href="?u=log&a=login">
-                    <img src="views/image/Sign_up.png" alt="signup"class="signup_btn">
-                 </a>
+                <a href="?u=log&a=login">
+                    <?php 
+                    if(isset($_SESSION["login"])){
+                        if($_SESSION["login"] === 'admin') 
+                        {
+                            echo '
+                            <a href="./index.php?u=admin">
+                            <img src="views/image/admin-icon.png" alt="" srcset=""></a>
+                            ';
+                        }
+                        }
+                        else{
+                            echo '<img src="views/image/Sign_up.png" alt="signup"class="signup_btn">';
+                        }
+                        
+                        
+                    ?>
+                </a>
+                
+                
             </div>
         </section>
         <section class="section">

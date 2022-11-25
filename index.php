@@ -1,12 +1,12 @@
 <?php
-
+define("PROJ_DIR", dirname(__FILE__));
 
     session_start();
+    /* unset($_SESSION['login']); */
+   
 
-/* var_dump($_SESSION); */
 
 
-define("PROJ_DIR", dirname(__FILE__));
 
 include './models/ClubModel.php';
 include './models/TodoModel.php';
@@ -14,7 +14,9 @@ include './models/CheckLogin.class.php';
 /* include './classes/TodoContr.class.php'; */
 include './classes/ClubsContr.class.php';
 
-
+/* unset($_SESSION);
+session_destroy(); */
+/* var_dump($_SESSION); */
 
 $ClubMdl = new ClubModel();
 $clubCtl = new ClubsContr();
@@ -27,8 +29,8 @@ $loginModel = new signupModel();
 /* unset($_SESSION["admin"]); */
 if(isset($_SESSION["login"])){
 if($_SESSION["login"] === 'admin') {
-/* if(true){
-if(true) { */
+/* if(false){
+if(false) { */
 
     if(isset($_GET['c'])){
  
@@ -56,9 +58,8 @@ if(true) { */
                         $club = $ClubMdl->getClub($id);
                         $repName = $ClubMdl->getClubRepName($id);
                         require_once PROJ_DIR . "/views/pages/showclub.php";
-                    
                 }
-                
+
                 else if($_GET['a'] === "edit"){
                         $id = intval($_GET["id"]);
                         //Get one club
@@ -109,7 +110,6 @@ if(true) { */
         }
     }  
     else{
-        
         $listtodos = $todoModel->listTodo();
         $listclubs = $ClubMdl->listClubs();
         require_once PROJ_DIR . "/views/pages/admin.php";
@@ -121,9 +121,13 @@ else{
     if(isset($_GET['u'])){
         if($_GET['u'] === "log"){
             if($_GET['a'] === "login"){
-                require_once PROJ_DIR . "/views/pages/signup.php";
+                require_once PROJ_DIR . "/views/pages/loginform.php";
             }else if ($_GET['a'] === "session") {
                 require_once PROJ_DIR . "/views/pages/login.php";
+            }else if($_GET['a'] === "logout"){
+                
+                require_once PROJ_DIR . "/views/pages/logout.php";
+
             }
         }
     }else{
@@ -133,3 +137,8 @@ else{
 }
 
 /* header('Location: ./index.php'); */
+if(isset($_SESSION['login'])){
+if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
+    require_once PROJ_DIR . "/views/pages/logout.php";
+}
+}
