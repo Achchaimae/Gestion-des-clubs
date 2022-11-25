@@ -34,9 +34,9 @@
                 <div class="img_log">
                     <img src="../assets/image/login_man.png" alt="">
                 </div>
-                <form action="" class="demande_form">
+                <form action="?c=demande" class="demande_form" method="post">
                     <input type="text" name="name" placeholder="FULL NAME">
-                    <input type="date" name="age" placeholder="AGE">
+                    <input type="text" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">
                     <input type="text" name="classe" placeholder="CLASSE">
                     <input type="submit" value="envoyer" id="login_btn">

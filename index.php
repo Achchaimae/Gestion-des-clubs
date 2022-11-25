@@ -17,6 +17,7 @@ $clubCtl = new ClubsContr();
 $TodoCtl = new TodoContr();
 $Viewcls = new ViewsClass();
 $loginModel = new signupModel();
+$demande = new DemandeModel();
 
 
 
@@ -113,7 +114,8 @@ if(isset($_GET['c'])){
         $TodoCtl->deleteTodo();
          
       }
-} 
+}
+
 } //global variable is not set
 else {
         //header('Location: ./admin.php'); 
