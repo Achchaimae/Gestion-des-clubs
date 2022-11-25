@@ -4,7 +4,7 @@ class Dbh {
     private $host = "localhost";
     private $user = "root";
     private $pwd = "root";
-    private $dbName = "gestion";
+    private $dbName = "gestion2";
 
     protected function connect(){
         $dsn = 'mysql:host='.$this->host.';dbname='. $this->dbName;

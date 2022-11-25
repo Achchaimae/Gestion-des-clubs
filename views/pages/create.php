@@ -6,7 +6,7 @@ require_once PROJ_DIR . "/includes/header.php";
 <link rel="stylesheet" href="views/css/create.css">
 <div class="section">
 <div class="main-container ">
-        <form action="?c=Clubs&a=createNewClub" method="post" name="newClub" class="form">
+        <form action="?c=clubs&a=createNewClub" method="post" name="newClub" class="form">
             <div class="line">
             <label for="nom">Nom du club:</label>
             <input type="text" name="nom">
@@ -21,6 +21,7 @@ require_once PROJ_DIR . "/includes/header.php";
             <label for="datecreation">date de creation :</label>
             <input type="date" name="datecreation">
             </div>
+
 
             <div class="line">
             <input class="upload" type="file" id="myFile" name="logo">

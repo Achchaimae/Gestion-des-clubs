@@ -32,7 +32,7 @@ class ClubsContr {
             //Get one club
             $club = $this->model->getClub($id);
             require_once PROJ_DIR . "/views/pages/edit.php";
-            return;
+            return ;
         } else {
             die("Id is required");
         }

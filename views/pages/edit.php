@@ -5,13 +5,13 @@ require_once PROJ_DIR . "/includes/header.php";
 <link rel="stylesheet" href="views/css/clubs.css">
 
 <div class="main-container">
-        <form action="?c=Clubs&a=save&id=<?php echo $club["id"]; ?>" method="post" id="clubform">
+        <form action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="post" id="clubform">
         <div class="header">
             <div class="left">
                 <h1 class="club_name"><?php echo $club["nom"]; ?></h1>
                 <p class="member_count">members: 
                 <?php  
-                               echo $this->model->getClubMembersCount($club["id"]);
+                               echo $ClubMdl->getClubMembersCount($club["id"]);
                 ?>
                 </p>
                 <button class="modifier">modifier</button>
@@ -66,9 +66,9 @@ require_once PROJ_DIR . "/includes/header.php";
             
             
             </table>
-            <a href="?c=Clubs&a=save&id=<?php echo $club["id"]; ?>">
+            <a href="?c=clubs&a=save&id=<?php echo $club["id"]; ?>">
             <button class="modifier">Sauvegarder</button></a>
-            <a href="?c=Clubs&a=delete&id=<?php echo $club["id"]; ?>">
+            <a href="?c=clubs&a=delete&id=<?php echo $club["id"]; ?>">
             <button  class="modifier">supprimer</button></a>
         </div>
     </div>
