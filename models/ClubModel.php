@@ -49,6 +49,17 @@ class ClubModel extends dbh{
 
         return $result;
     }
+    public function getAllMembersRows(){
+        
+        // this function returns associatuve array of club member_ids
+        $sql = "select * from membre";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchall();  
+        /* $clubMembers = $stmt->fetchall();   */
+
+        return $result;
+    }
     public function getClubRepID($id_club){
         
         // this function returns associatuve array of club member_ids
@@ -97,6 +108,7 @@ class ClubModel extends dbh{
             $stmt->execute();
             return $id;
         }
+    
     
 } 
 

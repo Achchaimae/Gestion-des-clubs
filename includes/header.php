@@ -20,7 +20,7 @@
         <ul>
             
             <li><a href="./index.php"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="./membres.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="./?c=membres"><i class="fa-solid fa-user"></i></a></li>
             <li><i class="fa-solid fa-bell"></i></li>
             <li><i class="fa-solid fa-calendar"></i></li>
         </ul>

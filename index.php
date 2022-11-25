@@ -27,6 +27,8 @@ $loginModel = new signupModel();
 /* unset($_SESSION["admin"]); */
 if(isset($_SESSION["login"])){
 if($_SESSION["login"] === 'admin') {
+/* if(true){
+if(true) { */
 
     if(isset($_GET['c'])){
  
@@ -102,6 +104,11 @@ if($_SESSION["login"] === 'admin') {
                     }
                 }
             }
+        }else if($_GET['c'] === "membres"){
+
+            $allmembers = $ClubMdl->getAllMembersRows();
+
+            require_once PROJ_DIR . "/views/pages/membres.php";
         }
     }  
     else{
@@ -114,6 +121,7 @@ if($_SESSION["login"] === 'admin') {
 }}
 // no login
 else{
+
     require_once PROJ_DIR . "/views/pages/home.php";
 }
 
