@@ -12,7 +12,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                 <h3>Clubs</h3>
             </div>
             <div>
-                 <a href="?c=log&a=login">
+                 <a href="?u=log&a=login">
                     <img src="views/image/Sign_up.png" alt="signup"class="signup_btn">
                  </a>
             </div>

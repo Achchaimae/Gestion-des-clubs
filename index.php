@@ -55,7 +55,6 @@ if(true) { */
                         //Get one club
                         $club = $ClubMdl->getClub($id);
                         $repName = $ClubMdl->getClubRepName($id);
-                        
                         require_once PROJ_DIR . "/views/pages/showclub.php";
                     
                 }
@@ -84,9 +83,7 @@ if(true) { */
 
                     echo $repName;
                     
-                    
                 }
-
             }
             
         }else if($_GET['c'] === "todo"){
@@ -121,8 +118,18 @@ if(true) { */
 }}
 // no login
 else{
-
-    require_once PROJ_DIR . "/views/pages/home.php";
+    if(isset($_GET['u'])){
+        if($_GET['u'] === "log"){
+            if($_GET['a'] === "login"){
+                require_once PROJ_DIR . "/views/pages/signup.php";
+            }else if ($_GET['a'] === "session") {
+                require_once PROJ_DIR . "/views/pages/login.php";
+            }
+        }
+    }else{
+        require_once PROJ_DIR . "/views/pages/home.php";
+    }
+    
 }
 
 /* header('Location: ./index.php'); */
