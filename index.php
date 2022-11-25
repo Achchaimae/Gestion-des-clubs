@@ -48,20 +48,27 @@ if($_SESSION["login"] === 'admin') {
                     header('Location: ./index.php');
                     
                 }
-                else if($_GET['a'] === "editForm"){
-                    
+                else if($_GET['a'] === "clubForm"){
                         $id = intval($_GET["id"]);
                         //Get one club
                         $club = $ClubMdl->getClub($id);
-                        require_once PROJ_DIR . "/views/pages/edit.php";
+                        require_once PROJ_DIR . "/views/pages/showclub.php";
                     
                 }
                 
-                else if($_GET['a'] === "save"){
-                    $ClubMdl->saveClub();
-                    $id = intval($_GET["id"]);
+                else if($_GET['a'] === "edit"){
+                        $id = intval($_GET["id"]);
+                        //Get one club
                         $club = $ClubMdl->getClub($id);
-                        require_once PROJ_DIR . "/views/pages/edit.php";
+                        require_once PROJ_DIR . "/views/pages/editclub.php";
+                }
+                else if($_GET['a'] === "save"){
+                    
+                    $nom= $_POST["nom"]; 
+                    $description= $_POST["description"]; 
+                    $id=$_GET["id"];
+                    $ClubMdl->updateClub($nom,$description,$id);
+                    header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
                 }
             }
             

@@ -22,12 +22,12 @@ require_once PROJ_DIR . "/includes/header.php";
 
             <div class="club_info">
             <?php foreach($listclubs as $key=>$value){ ?>
-                    <a href="?c=clubs&a=editForm&id=<?php echo $value["id"]; ?>">
+                    <a href="?c=clubs&a=clubForm&id=<?php echo $value["id"]; ?>">
                     <div class="club" role="button">
                         <div class="infos">
                             <h4 class="club_name"> <?php echo $value["nom"]; ?></h4>
                             <p class="members">
-                                members: 
+                                members: <?php echo $value["membres"]; ?>
                                
                             </p>
                         </div>

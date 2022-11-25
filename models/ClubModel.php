@@ -55,13 +55,12 @@ class ClubModel extends dbh{
         
     }
 
-    public function saveClub(){
-            $description= $_POST["description"]; 
-            $id=$_GET["id"];
-            $sql = "update club SET description= '$description' WHERE id=$id";
+    public function updateClub($nom,$description,$id){
+       
+            $sql = "update club SET nom= '$nom',description='$description' WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
-            
+            return $id;
         }
     
 } 

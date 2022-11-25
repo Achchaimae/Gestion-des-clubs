@@ -24,7 +24,9 @@ class ClubsContr {
         return;
     }
    
-    
+    public function showClub($id){
+        
+    }
    
     public function editClub(){
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){

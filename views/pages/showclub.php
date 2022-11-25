@@ -8,23 +8,24 @@ require_once PROJ_DIR . "/includes/header.php";
         <form action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="post" id="clubform">
         <div class="header">
             <div class="left">
+                
                 <h1 class="club_name"><?php echo $club["nom"]; ?></h1>
                 <p class="member_count">members: 
                 <?php  
-                               echo $ClubMdl->getClubMembersCount($club["id"]);
+                               echo $club["membres"];
                 ?>
                 </p>
-                <button class="modifier">modifier</button>
+                <!-- <button class="modifier">modifier</button> -->
             </div>
             <div class="middle">
                 <h2 class="representant">represantant:</h2>
                 <p class="representant_name"> achchaimae khalaf</p>
-                <button class="modifier">modifier</button>
+                <!-- <button class="modifier">modifier</button> -->
             </div>
             <div class="right">
             
                 <div class="logo"><?php echo $club["logo"]; ?></div>
-                <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+                <!-- <button class="modifier"><i class="fa-solid fa-upload"></i></button> -->
             </div>
         </div>
         <div class="description">
@@ -32,7 +33,7 @@ require_once PROJ_DIR . "/includes/header.php";
             <div class="textarea"></i>
                 <textarea name="description" form="clubform" ><?php echo $club["description"]; ?></textarea>
                 <button type="submit" class="modifier">
-                    <i class="fa-solid fa-save"></i>
+                    <!-- <i class="fa-solid fa-save"></i> -->
                 </button>
 
             </div>
@@ -66,10 +67,10 @@ require_once PROJ_DIR . "/includes/header.php";
             
             
             </table>
-            <a href="?c=clubs&a=save&id=<?php echo $club["id"]; ?>">
-            <button class="modifier">Sauvegarder</button></a>
+            <a href="?c=clubs&a=edit&id=<?php echo $club["id"]; ?>">
+            <button class="modifier">modifier</button></a>
             <a href="?c=clubs&a=delete&id=<?php echo $club["id"]; ?>">
-            <button  class="modifier">supprimer</button></a>
+            <button  class="modifier">supprimer club</button></a>
         </div>
     </div>
 <?php
