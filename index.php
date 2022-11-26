@@ -45,12 +45,11 @@ if(false) { */
                      
                     $file=$_FILES['logo'];
 
-
                     $file_name = $file['name'];
-                    $type = $file['type'];
-                    $tem_name = $file['tmp_name'];echo '<br>';
-                    $error = $file['error'];echo '<br>'; 
-                    $syze = $file['size'];
+                    
+                    $tem_name = $file['tmp_name'];
+                    
+                    
                     $fileExt = explode('.', $file_name);
                     $fileExtlowCase = strtolower(end($fileExt));
 
@@ -90,21 +89,32 @@ if(false) { */
                         require_once PROJ_DIR . "/views/pages/editclub.php";
                 }
                 else if($_GET['a'] === "save"){
-                    
+                    $file=$_FILES['logo'];
+                    $file_name = $file['name'];
+                    $tem_name = $file['tmp_name'];
+                    $fileExt = explode('.', $file_name);
+                    $fileExtlowCase = strtolower(end($fileExt));
+                    $fileNameToSave = uniqid('',true).".".$fileExtlowCase;
+                    $fileDestination = 'views/uploads/'.$fileNameToSave;
+                    move_uploaded_file($tem_name,$fileDestination);
                     $nom= $_POST["nom"]; 
                     $description= $_POST["description"]; 
-                    $newrepID= $_POST['newrep'];
+                   
+                    if (isset($POST['newrep'])) {
+                        $newrepID = $_POST['newrep'];
+                    }else {
+                        $newrepID = 0;
+                    }
                     $id=$_GET["id"];
-                    $ClubMdl->updateClub($nom,$description,$id,$newrepID);
+                    $ClubMdl->updateClub($nom,$description,$id,$newrepID,$fileDestination);
+                    
                     header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
                 }
                 else if($_GET['a'] === "test"){
                     
                     require_once PROJ_DIR . "/views/pages/xxx.php";
                     
-                    $repName = $ClubMdl->getClubMembersCount(1);
-
-                    echo $repName;
+                    
                     
                 }
             }

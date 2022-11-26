@@ -5,7 +5,7 @@ require_once PROJ_DIR . "/includes/header.php";
 <link rel="stylesheet" href="views/css/clubs.css">
 
 <div class="main-container">
-        <form  action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="POST" id="clubform" name="clubform">
+        <form  action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="POST" id="clubform" name="clubform" enctype="multipart/form-data">
 
         <div class="header">
             <div class="left">
@@ -33,8 +33,11 @@ require_once PROJ_DIR . "/includes/header.php";
             </div>
             <div class="right">
             
-                <div class="logo"><?php echo $club["logo"]; ?></div>
-                <button class="modifier"><i class="fa-solid fa-upload"></i></button>
+            <div class="logo">
+                <img class="logoimg" src="<?php echo $club["logo"]; ?>" alt="no logo yet">
+                    
+                </div>
+                <input class="upload" type="file" id="myFile" name="logo">
             </div>
         </div>
         <div class="description">

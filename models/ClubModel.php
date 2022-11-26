@@ -101,9 +101,9 @@ class ClubModel extends dbh{
         
     }
 
-    public function updateClub($nom,$description,$id,$newrepID){
+    public function updateClub($nom,$description,$id,$newrepID,$fileDestination){
        
-            $sql = "update club SET nom= '$nom',description='$description',rep=$newrepID WHERE id=$id";
+            $sql = "update club SET nom= '$nom',description='$description',rep='$newrepID',logo='$fileDestination' WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
             return $id;
