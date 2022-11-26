@@ -35,9 +35,10 @@ require_once PROJ_DIR . "/includes/header.php";
             
             <div class="logo">
                 <img class="logoimg" src="<?php echo $club["logo"]; ?>" alt="no logo yet">
-                    
+                
                 </div>
-                <input class="upload" type="file" id="myFile" name="logo">
+                <input type="hidden" name="logoD" value="<?php echo $club["logo"]; ?>">
+                <input class="upload" type="file" id="myFile"  name="logo">
             </div>
         </div>
         <div class="description">

@@ -18,7 +18,10 @@
 <body>
     <div class="nav">
         <ul>
-            <li><a href="./index.php">x</a></li>
+            <li><a href="./index.php"><i>x</i></a></li>
+            <li><a href="./?c=membres"><i>y</i></a></li>
+            
+            
             
             <!-- <li><a href="./index.php"><i class="fa-solid fa-house"></i></a></li>
             <li><a href="./?c=membres"><i class="fa-solid fa-user"></i></a></li>

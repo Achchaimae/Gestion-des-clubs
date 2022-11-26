@@ -90,6 +90,9 @@ if(false) { */
                 }
                 else if($_GET['a'] === "save"){
                     $file=$_FILES['logo'];
+                    if ($file['error']>0) {
+                        $fileDestination=$_POST['logoD'];
+                    }else{
                     $file_name = $file['name'];
                     $tem_name = $file['tmp_name'];
                     $fileExt = explode('.', $file_name);
@@ -97,6 +100,9 @@ if(false) { */
                     $fileNameToSave = uniqid('',true).".".$fileExtlowCase;
                     $fileDestination = 'views/uploads/'.$fileNameToSave;
                     move_uploaded_file($tem_name,$fileDestination);
+                    }
+                    
+                    /* $logo = $_POST["logo"];  */
                     $nom= $_POST["nom"]; 
                     $description= $_POST["description"]; 
                    
@@ -107,7 +113,7 @@ if(false) { */
                     }
                     $id=$_GET["id"];
                     $ClubMdl->updateClub($nom,$description,$id,$newrepID,$fileDestination);
-                    
+                    /* require_once PROJ_DIR . "/views/pages/xxx.php"; */
                     header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
                 }
                 else if($_GET['a'] === "test"){
