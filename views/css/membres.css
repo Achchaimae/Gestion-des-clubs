@@ -132,14 +132,18 @@ li{
 }
 .right{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 110px;
+    height: 100%;
 }
 .right button{
     border: none;
     background-color: transparent;
-    
-   
+}
+
+.svg{
+    width: 20px;
+    height: 20px;
 }
 
 .right .fa-soli{

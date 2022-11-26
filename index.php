@@ -74,7 +74,9 @@ else{
 
 /* header('Location: ./index.php'); */
 if(isset($_SESSION['login'])){
-if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
-    require_once PROJ_DIR . "/views/pages/logout.php";
+    if (isset($_GET['c'])) {
+    if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
+        require_once PROJ_DIR . "/views/pages/logout.php";
+}
 }
 }

@@ -10,6 +10,10 @@
     height: 100vh;
     background-color: #CFDCFF;
 }
+.svg{
+    width: 20px;
+    height: 20px;
+}
 .main-container {
     border-radius: 20px;
     padding: 30px;
@@ -88,10 +92,14 @@ h3{
     height: 40px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #43B0F1;
+    background-color: #5E87F5;
     fill: white;
+    cursor: pointer;
     transition: background-color 600ms ease-in-out;
 
+}
+.club:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .add-button:hover{
     background-color: #1D0E2C;
@@ -125,7 +133,7 @@ h3{
     font-size: 15px;
     display: none;
  }
- button:nth-child(1){
+/*  button:nth-child(1){
     background-color: #B1E0FB;
  }
  button:nth-child(2){
@@ -133,7 +141,7 @@ h3{
  }
  button:nth-child(3){
     background-color: #D3F6B6;
- }
+ } */
 /* clubs */
 .clubs{
     width: 100%;
@@ -142,13 +150,13 @@ h3{
    margin: 0 40px;
    box-sizing: content-box;
    position: relative;
-/*     border: 2px solid #1D0E2C;
- */}
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    
+}
 .club{
     background-color: #5E87F5;
     border-radius: 10px;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 20px 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -189,6 +197,7 @@ h3{
     height:fit-content;
     min-width: 320px;
     padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .right h3{
     color: #1D0E2C;
@@ -233,8 +242,9 @@ h3{
 .todo .add-button{
     position: absolute;
     right: 0;
-    background-color: #5E87F5;
-    fill: #1D0E2C;
+}
+.todo button{
+    border: none;
 }
 .add-todo{
     width: 100%;

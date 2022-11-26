@@ -30,17 +30,10 @@ require_once PROJ_DIR . "/includes/header.php";
                         <h3>Role</h3>
                     </div>
                     <div class="right">
-                        <div class="fa-soli">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                        
-                        <div class="fa-soli">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                        
-                        <div class="fa-soli">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
+                            
+                            <img src="views/icons/edit.svg" class="svg" alt="" srcset="">
+                            <img src="views/icons/delete.svg" class="svg" alt="" srcset="">
+                            <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
                         
                     </div>
                 </div>
