@@ -93,12 +93,12 @@ class ClubModel extends dbh{
         return $clubMembers;
     }
     
-    public function deleteClub($id){
+    public function delete($id){
 
             $sql = "delete from club where id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
-        
+            header('Location: ./index.php');
     }
 
     public function updateClub($nom,$description,$id,$newrepID,$fileDestination){
