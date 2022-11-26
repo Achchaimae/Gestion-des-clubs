@@ -59,7 +59,7 @@ if(false) { */
 
                     move_uploaded_file($tem_name,$fileDestination);
                     
-                    $ClubMdl->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$fileDestination); 
+                    $ClubMdl->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$fileDestination,0); 
                      header('Location: ./index.php');
                    
                 }

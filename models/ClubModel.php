@@ -2,10 +2,10 @@
 include_once PROJ_DIR . "/classes/dbh.class.php";
 class ClubModel extends dbh{
 
-    public function createClub($nom,$description,$datecreation,$logo){
-        $sql = "insert into club (nom,description,date_creation,logo) values(?,?,?,?)";
+    public function createClub($nom,$description,$datecreation,$logo,$membres){
+        $sql = "insert into club (nom,description,date_creation,logo,membres) values(?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$nom,$description,$datecreation,$logo]);
+        $stmt->execute([$nom,$description,$datecreation,$logo,$membres]);
     }
 
     public function listClubs(){
