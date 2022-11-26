@@ -24,7 +24,10 @@ require_once PROJ_DIR . "/includes/header.php";
             </div>
             <div class="right">
             
-                <div class="logo"><?php echo $club["logo"]; ?></div>
+                <div class="logo">
+                <img src="<?php echo $club["logo"]; ?>" alt="no logo yet">
+                    
+                </div>
                 <!-- <button class="modifier"><i class="fa-solid fa-upload"></i></button> -->
             </div>
         </div>

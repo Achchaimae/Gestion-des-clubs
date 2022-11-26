@@ -10,22 +10,26 @@
     
     <script src="https://kit.fontawesome.com/a26b51a86d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> -->
     
     <title>Document</title>
 </head>
 <body>
     <div class="nav">
         <ul>
-            
-            <li><a href="./index.php"><i class="fa-solid fa-house"></i></a></li>
+            <li>x</li>
+            <li>x</li>
+            <li>x</li>
+            <li>x</li>
+            <!-- <li><a href="./index.php"><i class="fa-solid fa-house"></i></a></li>
             <li><a href="./?c=membres"><i class="fa-solid fa-user"></i></a></li>
             <li><i class="fa-solid fa-bell"></i></li>
-            <li><i class="fa-solid fa-calendar"></i></li>
+            <li><i class="fa-solid fa-calendar"></i></li> -->
         </ul>
         <a href="?c=log&a=logout">
-        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
+        x
         </a>
     </div>
     

@@ -20,7 +20,7 @@ class ClubsContr {
     public function createNewClub($nom,$description,$datecreation,$logo){
      
          $this->model->createClub($nom,$description,$datecreation,$logo);
-         header('Location: ./index.php');
+        /*  header('Location: ./index.php'); */
         return;
     }
    

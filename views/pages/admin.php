@@ -31,7 +31,10 @@ require_once PROJ_DIR . "/includes/header.php";
                                
                             </p>
                         </div>
-                        <img src="" alt="" class="logo">
+                        <div class="logo">
+                        <img class="logoimg" src="<?php echo $value["logo"]; ?>" alt="no logo yet">
+                        </div>
+                        
                     </div>
                     </a>
                 <?php } ?>

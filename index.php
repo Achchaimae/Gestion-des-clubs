@@ -40,12 +40,29 @@ if(false) { */
                  
                 if($_GET['a'] === "newClubForm"){
                     require_once PROJ_DIR . "/views/pages/create.php";
-                    
                 }
                 else if($_GET['a'] === "createNewClub"){
-                    $ClubMdl->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$_POST["logo"]);
-                    header('Location: ./index.php');
+                     
+                    $file=$_FILES['logo'];
+
+
+                    $file_name = $file['name'];
+                    $type = $file['type'];
+                    $tem_name = $file['tmp_name'];echo '<br>';
+                    $error = $file['error'];echo '<br>'; 
+                    $syze = $file['size'];
+                    $fileExt = explode('.', $file_name);
+                    $fileExtlowCase = strtolower(end($fileExt));
+
+                    $fileNameToSave = uniqid('',true).".".$fileExtlowCase;
+
+                    $fileDestination = 'views/uploads/'.$fileNameToSave;
+
+                    move_uploaded_file($tem_name,$fileDestination);
                     
+                    $ClubMdl->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$fileDestination); 
+                     header('Location: ./index.php');
+                   
                 }
                 else if($_GET['a'] === "delete"){
                     $ClubMdl->deleteClub($_GET["id"]);
@@ -56,7 +73,12 @@ if(false) { */
                         $id = intval($_GET["id"]);
                         //Get one club
                         $club = $ClubMdl->getClub($id);
-                        $repName = $ClubMdl->getClubRepName($id);
+                        if (isset($club['rep'])) {
+                            $repName = $ClubMdl->getClubRepName($id);
+                        }else {
+                            $repName = 'no rep';
+                        }
+                        
                         require_once PROJ_DIR . "/views/pages/showclub.php";
                 }
 

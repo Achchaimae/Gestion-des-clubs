@@ -5,7 +5,7 @@ class ClubModel extends dbh{
     public function createClub($nom,$description,$datecreation,$logo){
         $sql = "insert into club (nom,description,date_creation,logo) values(?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        print $stmt->execute([$nom,$description,$datecreation,$logo]);
+        $stmt->execute([$nom,$description,$datecreation,$logo]);
     }
 
     public function listClubs(){
@@ -109,11 +109,13 @@ class ClubModel extends dbh{
             return $id;
         }
     
+    public function saveReq($nom,$description,$id,$newrepID){
+       
+            $sql = "update club SET nom= '$nom',description='$description',rep=$newrepID WHERE id=$id";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
+            return $id;
+        }
+    
     
 } 
-
-
-
-
-/*         print_r(array_count_values($results));
- */        /* var_dump($results); */
