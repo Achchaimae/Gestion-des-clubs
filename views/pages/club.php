@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../css/userstyle.css">
     
     <!-- linking css style -->
-    <link rel="stylesheet" href="style.css">
     <!-- end linking css style -->
     
     <!-- link a font style -->
@@ -20,13 +19,13 @@
          <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">  
              <!-- end linking a font style -->
     <title>YouCode Clubs</title>
-    <link rel="icon" type="image/x-icon" href="../assets/image/icon_web.png">
+    <link rel="icon" type="image/x-icon" href="../image/icon_web.png">
 </head>
 <body>
     <main>
         <section class="navbar">
             <div class="youcode_logo">
-                <a href="../index.html"> <img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="home.php"> <img src="../image/youcode_logo.png" alt="youcode_logo"></a>
                
                 <h3>Clubs</h3>
             </div>
@@ -43,7 +42,7 @@
               
             </div>
             <div class="decouvrir_btn">
-                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="demande.html">Demande</a></button>
+                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="demande.php">Demande</a></button>
                 <div class="button-background"></div>
             </div>
             <div class="about_club">
@@ -62,7 +61,7 @@
                     <ul> 
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -71,7 +70,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -80,7 +79,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -89,7 +88,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -98,7 +97,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -107,7 +106,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -116,7 +115,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -125,7 +124,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -134,7 +133,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -143,7 +142,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -152,7 +151,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -161,7 +160,7 @@
                         </li>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="../image/membre_img.jpg" alt="membre_img">
                                 <div class="club_membre_info">
                                     <p>FULL name</p>
                                     <p>classe</p>
@@ -207,7 +206,7 @@
             <div class="galerie">
 
                 <div class="activite">
-                    <img src="../assets/image/art_club2.png" alt="art">
+                    <img src="../image/art_club2.png" alt="art">
                     <div class="intro">
                         <h3>Title</h3> 
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis neque soluta excepturi nihil quia hic asperiores veritatis libero ducimus eos optio doloribus recusandae</p>
@@ -215,7 +214,7 @@
                    
                 </div>
                 <div class="activite">
-                    <img src="../assets/image/art_club2.png" alt="art">
+                    <img src="../image/art_club2.png" alt="art">
                     <div class="intro">
                         <h3>Title</h3> 
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis neque soluta excepturi nihil quia hic asperiores veritatis libero ducimus eos optio doloribus recusandae</p>
@@ -223,7 +222,7 @@
                    
                 </div>
                 <div class="activite">
-                    <img src="../assets/image/art_club2.png" alt="art">
+                    <img src="../image/art_club2.png" alt="art">
                     <div class="intro">
                         <h3>Title</h3> 
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis neque soluta excepturi nihil quia hic asperiores veritatis libero ducimus eos optio doloribus recusandae</p>
@@ -231,7 +230,7 @@
                    
                 </div>
                 <div class="activite">
-                    <img src="../assets/image/art_club2.png" alt="art">
+                    <img src="../image/art_club2.png" alt="art">
                     <div class="intro">
                         <h3>Title</h3> 
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis neque soluta excepturi nihil quia hic asperiores veritatis libero ducimus eos optio doloribus recusandae</p>

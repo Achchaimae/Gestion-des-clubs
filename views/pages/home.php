@@ -147,7 +147,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                         </p>
                     </div>
                     <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
+                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.php">decouvrir</a></button>
                         <div class="button-background"></div>
                     </div>
                 </div>

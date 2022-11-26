@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <!-- linking css style -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../css/userstyle.css">
     <!-- end linking css style -->
     
     <!-- link a font style -->
@@ -19,22 +19,22 @@
          <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">  
              <!-- end linking a font style -->
     <title>YouCode Clubs</title>
-    <link rel="icon" type="image/x-icon" href="icon_web.png">
+    <link rel="icon" type="image/x-icon" href="../image/icon_web.png">
 </head>
 <body>
     <main class="demande_page">
         <section class="navbar demande_navbar">
             <div class="youcode_logo">
-                <a href="../index.html"><img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="home.php"><img src="../image/youcode_logo.png" alt="youcode_logo"></a>
                 
                 <h3>Clubs</h3>
             </div>
         </section>
         <section class="form">
                 <div class="img_log">
-                    <img src="../assets/image/login_man.png" alt="">
+                    <img src="../image/login_man.png" alt="">
                 </div>
-                <form action="#" class="demande_form">
+                <form action="?c=demande" class="demande_form">
                     <input type="text" name="Full name" placeholder="FULL NAME">
                     <input type="date" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">

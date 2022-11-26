@@ -23,5 +23,5 @@
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">  
         <!-- end linking a font style -->
     <title>Youcode Clubs</title>
-    <link rel="icon" type="image/x-icon" href="image/icon_web.png">
+    <link rel="icon" type="image/x-icon" href="views/image/icon_web.png">
 </head>
