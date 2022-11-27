@@ -22,7 +22,7 @@ require_once PROJ_DIR . "/includes/header.php";
                 <div class="apprenant">
                     <div class="left" id="left">
                         <h1><?php echo $value["nom_complet"]; ?></h1>
-                        <h4><?php echo $value["age"]; ?></h4>
+                        <h4><?php echo $value["age"]; ?> ans</h4>
                     </div>
                     <div class="middle">
                         <h2><?php echo $value["class"]; ?></h2>
