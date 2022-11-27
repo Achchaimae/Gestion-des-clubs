@@ -10,6 +10,7 @@ define("PROJ_DIR", dirname(__FILE__));
 
 include './models/ClubModel.php';
 include './models/TodoModel.php';
+include './models/DemandeModel.php';
 include './models/CheckLogin.class.php';
 /* include './classes/TodoContr.class.php'; */
 include './classes/ClubsContr.class.php';
@@ -24,6 +25,8 @@ $todoModel = new todoModel();
 /* $TodoCtl = new TodoContr(); */
 
 $loginModel = new signupModel();
+$demande  = new DemandeModel();
+
 
 
 /* unset($_SESSION["admin"]); */
@@ -141,4 +144,12 @@ if(isset($_SESSION['login'])){
 if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
     require_once PROJ_DIR . "/views/pages/logout.php";
 }
+
 }
+//not working yet
+if($_GET['c'] === "demande"){
+    $demande->demande($_POST["nom_complet"],$_POST["class"],$_POST["age"],$_POST["email"]);
+    header('Location: ./index.php');
+    
+}
+
