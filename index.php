@@ -10,14 +10,17 @@ define("PROJ_DIR", dirname(__FILE__));
 
 include './models/ClubModel.php';
 include './models/TodoModel.php';
+include './models/DemandesModel.php';
 include './models/CheckLogin.class.php';
 include './controlers/ClubsContr.class.php';
+include './controlers/DemandesContr.class.php';
 
 
 $clubMdl = new ClubModel();
 $todoModel = new todoModel();
 $loginModel = new signupModel();
 $clubCtl = new ClubsContr();
+$demandesCtl = new DemandesContr();
 
 /* unset($_SESSION["admin"]); */
 if(isset($_SESSION["login"])){
@@ -43,6 +46,14 @@ if(false) { */
 
             $allmembers = $clubMdl->getAllMembersRows();
             require_once PROJ_DIR . "/views/pages/membres.php";
+        }else if($_GET['c'] === "demandes"){
+
+            if(isset($_GET['a'])){
+                $action=$_GET['a'];
+                $demandesCtl->$action(); 
+            }else{
+                $demandesCtl->listDemandes();
+            }
         }
     }  
     else{
