@@ -85,7 +85,8 @@ class ClubsContr {
                     $this->model->updateClub($nom,$description,$id,$newrepID,$fileDestination);
                     header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
     }
-    public function delete($id){
+    public function delete(){
+        $id=$_GET['id'];
         $this->model->delete($id);
     }
 } 

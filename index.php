@@ -39,8 +39,8 @@ if(false) { */
             
         }else if($_GET['c'] === "todo"){
             if(isset($_GET['a'])){
-                $action=$_GET['a'];
-                $todoModel->$action(); 
+                $action = $_GET['a'];
+                $todoModel -> $action(); 
             }
         }else if($_GET['c'] === "membres"){
 
@@ -50,15 +50,15 @@ if(false) { */
 
             if(isset($_GET['a'])){
                 $action=$_GET['a'];
-                $demandesCtl->$action(); 
+                $demandesCtl -> $action(); 
             }else{
-                $demandesCtl->listDemandes();
+                $demandesCtl -> listDemandes();
             }
         }
     }  
     else{
-        $listtodos = $todoModel->listTodo();
-        $listclubs = $clubMdl->listClubs();
+        $listtodos = $todoModel -> listTodo();
+        $listclubs = $clubMdl -> listClubs();
         require_once PROJ_DIR . "/views/pages/admin.php";
     }
     

@@ -1,10 +1,10 @@
-create database gestion2;
-use gestion2;
+create database gestion3;
+use gestion3;
 
 create table club(
 id int not null auto_increment,
 primary key(id),
-nom varchar(20),
+nom varchar(100),
 membres int,
 logo blob,
 date_creation  date,
@@ -14,28 +14,28 @@ rep int
 
 create table evenement (
 id int not null auto_increment primary key,
-id_club int not null,
-foreign key (id_club) references club(id),
-nom varchar(20),
+id_club int,
+foreign key (id_club) references club(id) ON DELETE SET NULL ,
+nom varchar(100),
 event_date date,
-lieu varchar(20),
+lieu varchar(100),
 description text
 );
 
 create table admin(
 id int not null auto_increment primary key,
-login varchar(20),
+login varchar(100),
 password text
 );
 create table demande(
 id_demande int not null auto_increment,
 primary key(id_demande),
-nom_complet varchar(20),
-class varchar(20),
+nom_complet varchar(100),
+class varchar(100),
 age int,
-email varchar(20),
+email varchar(100),
 id_club int,
-foreign key (id_club) references club(id)
+foreign key (id_club) references club(id) ON DELETE SET NULL
 );
 
 create table ToDo(
@@ -46,11 +46,11 @@ task text
 create table membre(
 id_membre int not null auto_increment,
 primary key(id_membre),
-nom_complet varchar(20),
-class varchar(20),
+nom_complet varchar(100),
+class varchar(100),
 age int,
-email varchar(20),
-membre_role varchar(20),
+email varchar(100),
+membre_role varchar(100),
 id_club int ,
 foreign key (id_club) references club(id) ON DELETE SET NULL
 );
