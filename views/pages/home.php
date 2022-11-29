@@ -137,11 +137,10 @@ require_once PROJ_DIR . "/includes/users_header.php";
        
         <h1> You <span style="color:blue ;">Code</span> clubs</h1>
         <section class="clubs">
-        <section class="clubs">
             <?php foreach ($clubslist as $key => $value) {?>
               <div class="club_card">
               <div class="club_img">
-                  <img src="views/image/gaming_club.png" alt="club image">
+                  <img src="<?php echo $value["logo"]; ?>" alt="club image">
               </div>
               <div class="abt_club">
                   <div class="p-wrapper">

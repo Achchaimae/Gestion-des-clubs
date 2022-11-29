@@ -196,13 +196,17 @@ section{
     display: flex;
     justify-content: space-between;
     align-items:center;
+    background-color:#cfdcff96 !important;
     margin: 4rem;
     padding: 2rem;
+    border-radius: 12px;
+    transition: all .5s ease;
+
 }
 .club_card:hover{
-    background-color:#cfdcff96;
     box-shadow: 5px 5px 5px #4e69c39d;
     border-radius: 12px;
+    transform: scale(1.02);
 }
 
 .club_img img{
