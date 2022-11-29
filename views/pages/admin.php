@@ -1,7 +1,8 @@
 <?php
 
 require_once PROJ_DIR . "/includes/header.php";
-
+$listtodos = $todoModel -> listTodo();
+$listclubs = $clubMdl -> listClubs();
 ?>
 <link rel="stylesheet" href="views/css/styles.css">
 <div class="main-container">
