@@ -7,10 +7,8 @@ class DemandesModel extends dbh{
         $sql = "select * from demande";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
-
-        /* $result = $stmt->fetchall();
-        var_dump($result); */
-       return $stmt;
+        $resulta = $stmt->fetchAll();
+        return $resulta;
         
     }
     public function getDemande($id_demande){

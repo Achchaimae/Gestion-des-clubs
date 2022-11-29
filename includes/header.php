@@ -1,4 +1,6 @@
 <?php
+$demandesMdl = new DemandesModel();
+$demandes = $demandesMdl -> listDemandes();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +26,18 @@
             
             <li><a href="./index.php"><img src="views/icons/home.svg" alt="" srcset=""></i></a></li>
             <li><a href="./?c=membres"><img src="views/icons/membres.svg" alt="" srcset=""></i></a></li>
-            <li><a href="./?c=demandes"><img src="views/icons/bell.svg" alt="" srcset=""></i></a></li>
+            <li><div><p>
+            <?php 
+            if (count($demandes)>0) {
+                echo count($demandes);
+            }else
+            echo '';
+            ?>
+            </p></div>
+                <a href="./?c=demandes">
+                
+                <img src="views/icons/bell.svg" alt="" srcset="">
+            </i></a></li>
             <li><a href="./index.php"><img src="views/icons/calendar.svg" alt="" srcset=""></i></a></li>
             
         </ul>

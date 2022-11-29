@@ -9,6 +9,7 @@ define("PROJ_DIR", dirname(__FILE__));
 
 
 include './models/ClubModel.php';
+/* include './models/DemandesModel.php'; */
 include './models/TodoModel.php';
 include './models/DemandesModel.php';
 include './models/CheckLogin.class.php';
@@ -21,6 +22,7 @@ $todoModel = new todoModel();
 $loginModel = new signupModel();
 $clubCtl = new ClubsContr();
 $demandesCtl = new DemandesContr();
+
 
 /* unset($_SESSION["admin"]); */
 if(isset($_SESSION["login"])){
@@ -59,6 +61,7 @@ if(false) { */
     else{
         $listtodos = $todoModel -> listTodo();
         $listclubs = $clubMdl -> listClubs();
+        
         require_once PROJ_DIR . "/views/pages/admin.php";
     }
     
