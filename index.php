@@ -62,6 +62,7 @@ if(false) { */
         $listtodos = $todoModel -> listTodo();
         $listclubs = $clubMdl -> listClubs();
         
+        
         require_once PROJ_DIR . "/views/pages/admin.php";
     }
     
