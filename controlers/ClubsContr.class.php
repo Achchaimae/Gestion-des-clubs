@@ -89,4 +89,13 @@ class ClubsContr {
         $id=$_GET['id'];
         $this->model->delete($id);
     }
+    public function listClubs(){
+        
+        $clubslist = $this->model->listClubs();
+        
+        return $clubslist;
+    
+    
+}
+
 } 
