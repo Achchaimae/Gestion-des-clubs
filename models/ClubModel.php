@@ -12,7 +12,6 @@ class ClubModel extends dbh{
         $sql = "select * from club";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
-        
        return $stmt;
             /* 0=>["id"=>1, "name"=>"club1"],
             1=>["id"=>2, "name"=>"club2"], */

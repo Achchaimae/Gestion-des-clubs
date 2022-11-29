@@ -40,6 +40,14 @@ class ClubsContr {
         }
         
     }
+    public function listClubs(){
+        
+            $clubslist = $this->model->listClubs();
+            
+            return $clubslist;
+        
+        
+    }
    
     
     

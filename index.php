@@ -134,6 +134,9 @@ else{
             }
         }
     }else{
+
+        // for user part with no login 
+        $clubslist = $clubCtl->listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }
     
