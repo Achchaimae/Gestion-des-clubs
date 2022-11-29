@@ -81,6 +81,7 @@ else{
             }
         }
     }else{
+        $clubslist = $clubCtl->listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }
     
