@@ -5,9 +5,6 @@ define("PROJ_DIR", dirname(__FILE__));
     /* unset($_SESSION['login']); */
    
 
-
-
-
 include './models/ClubModel.php';
 /* include './models/DemandesModel.php'; */
 include './models/TodoModel.php';
@@ -45,9 +42,14 @@ if(false) { */
                 $todoModel -> $action(); 
             }
         }else if($_GET['c'] === "membres"){
-
-            $allmembers = $clubMdl->getAllMembersRows();
-            require_once PROJ_DIR . "/views/pages/membres.php";
+            if(isset($_GET['a'])){
+                $action=$_GET['a'];
+                $demandesCtl -> $action(); 
+            }else{
+                $allmembers = $clubMdl->getAllMembersRows();
+                require_once PROJ_DIR . "/views/pages/membres.php";
+            }
+            
         }else if($_GET['c'] === "demandes"){
 
             if(isset($_GET['a'])){

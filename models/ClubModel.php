@@ -102,11 +102,11 @@ class ClubModel extends dbh{
     }
 
     public function updateClub($nom,$description,$id,$newrepID,$fileDestination){
-       
+        
             $sql = "update club SET nom= '$nom',description='$description',rep='$newrepID',logo='$fileDestination' WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
-            return $id;
+            /* return $id; */
         }
     
     public function saveReq($nom,$description,$id,$newrepID){
@@ -115,6 +115,17 @@ class ClubModel extends dbh{
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
             return $id;
+        }
+    
+    
+    public function updateMembersCount($id){
+       
+        $club=$this->getClub($id);
+        $newMembersCount = $club['membres']+1;
+        
+        $sql = "update club SET membres= '$newMembersCount' WHERE id=$id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
         }
     
     

@@ -29,7 +29,9 @@ class DemandesContr {
             "membre",
             $demande_info['id_club']
         );
+
         $this->model->delete($id_demande);
+        $this->Clubsmodel->updateMembersCount($demande_info['id_club']);
         header('Location: ./?c=demandes');
     }
     public function refuse(){

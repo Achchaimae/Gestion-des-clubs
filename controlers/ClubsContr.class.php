@@ -76,13 +76,14 @@ class ClubsContr {
                     $nom= $_POST["nom"]; 
                     $description= $_POST["description"]; 
                    
-                    if (isset($POST['newrep'])) {
+                    if (isset($_POST['newrep'])) {
                         $newrepID = $_POST['newrep'];
                     }else {
                         $newrepID = 0;
                     }
                     $id=$_GET["id"];
                     $this->model->updateClub($nom,$description,$id,$newrepID,$fileDestination);
+                    /* var_dump($_POST); */
                     header("Location: index.php?c=clubs&a=clubForm&id=$id"); 
     }
     public function delete(){
