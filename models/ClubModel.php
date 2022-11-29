@@ -26,6 +26,15 @@ class ClubModel extends dbh{
         return $results;
       /*  return $stmt; */
     }
+    public function getClubName($id){
+        $sql = "select nom from club where id=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+        $result = $stmt->fetch();
+       
+        return $result["nom"];
+      /*  return $stmt; */
+    }
 
     public function getClubMembersID($id_club){
         
@@ -106,6 +115,10 @@ class ClubModel extends dbh{
             $sql = "update club SET nom= '$nom',description='$description',rep='$newrepID',logo='$fileDestination' WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
+
+            $sql = "update membre SET membre_role='rep' WHERE id_membre=$newrepID";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
             /* return $id; */
         }
     
@@ -114,6 +127,9 @@ class ClubModel extends dbh{
             $sql = "update club SET nom= '$nom',description='$description',rep=$newrepID WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
+
+            
+            
             return $id;
         }
     

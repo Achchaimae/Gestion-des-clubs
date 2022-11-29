@@ -26,8 +26,13 @@ require_once PROJ_DIR . "/includes/header.php";
                     </div>
                     <div class="middle">
                         <h2><?php echo $value["class"]; ?></h2>
-                        <h2>Club</h2>
-                        <h3>Role</h3>
+                        <h2>
+                        <?php echo($clubMdl->getClubName($value["id_club"])) ;
+                         ?>
+                        </h2>
+                        <h3>
+                        <?php echo $value["membre_role"]; ?>
+                        </h3>
                     </div>
                     <div class="right">
                             

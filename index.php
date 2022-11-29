@@ -47,6 +47,7 @@ if(false) { */
                 $demandesCtl -> $action(); 
             }else{
                 $allmembers = $clubMdl->getAllMembersRows();
+                
                 require_once PROJ_DIR . "/views/pages/membres.php";
             }
             

@@ -31,7 +31,9 @@ $listclubs = $clubMdl -> listClubs();
                         <div class="infos">
                             <h4 class="club_name"> <?php echo $value["nom"]; ?></h4>
                             <p class="members">
-                                members: <?php echo $value["membres"]; ?>
+                                members: <?php 
+                                echo($clubMdl ->getClubMembersCount($value["id"]));
+                                //echo $value["membres"]; ?>
                                
                             </p>
                         </div>
