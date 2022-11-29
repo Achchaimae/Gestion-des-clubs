@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <!-- linking css style -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../css/userstyle.css">
     <!-- end linking css style -->
     
     <!-- link a font style -->
@@ -25,14 +25,14 @@
     <main class="demande_page">
         <section class="navbar demande_navbar">
             <div class="youcode_logo">
-                <a href="../index.html"><img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="../index.html"><img src="../image/youcode_logo.png" alt="youcode_logo"></a>
                 
                 <h3>Clubs</h3>
             </div>
         </section>
         <section class="form">
                 <div class="img_log">
-                    <img src="../assets/image/login_man.png" alt="">
+                    <img src="../image/login_man.png" alt="">
                 </div>
                 <form action="#" class="demande_form">
                     <input type="text" name="Full name" placeholder="FULL NAME">
