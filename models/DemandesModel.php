@@ -27,11 +27,17 @@ class DemandesModel extends dbh{
         $stmt->execute();
         
     }
-    public function saveMember($nom_complet,$class,$age,$email,$membre_role,$id_club){
+    public function save($nom_complet,$class,$age,$email,$membre_role,$id_club){
         
         $sql = "insert into membre (nom_complet,class,age,email,membre_role,id_club) values (?,?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$nom_complet,$class,$age,$email,$membre_role,$id_club]);
+        $stmt->bindParam(1,$nom_complet);
+        $stmt->bindParam(2,$class);
+        $stmt->bindParam(3,$age);
+        $stmt->bindParam(4,$email);
+        $stmt->bindParam(5,$membre_role);
+        $stmt->bindParam(6,$id_club);
+        return $stmt->execute()? true : false;
         
     }
 

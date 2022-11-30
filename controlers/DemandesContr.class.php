@@ -21,14 +21,14 @@ class DemandesContr {
     public function accept(){
         $id_demande = $_GET['id_demande'];
         $demande_info = $this->model->getDemande($id_demande);
-        $this->model->saveMember(
-            $demande_info['nom_complet'],
-            $demande_info['class'],
-            $demande_info['age'],
-            $demande_info['email'],
-            "membre",
-            $demande_info['id_club']
-        );
+        // $this->model->saveMember(
+        //     $demande_info['nom_complet'],
+        //     $demande_info['class'],
+        //     $demande_info['age'],
+        //     $demande_info['email'],
+        //     "membre",
+        //     $demande_info['id_club']
+        // );
         $this->model->delete($id_demande);
         header('Location: ./?c=demandes');
     }
@@ -36,6 +36,12 @@ class DemandesContr {
         $id_demande = $_GET['id_demande'];
         $this->model->delete($id_demande);
         header('Location: ./?c=demandes');
+    }
+
+    public function save($data) 
+    {
+        $this->model->save($data['nom_complet'],$data['class'],$data['age'],$data['email'],$data['membre_role'],$data['id_club']);
+        header('Location: http://localhost/club');
     }
 
     

@@ -4,9 +4,7 @@ define("PROJ_DIR", dirname(__FILE__));
     session_start();
     /* unset($_SESSION['login']); */
    
-
-
-
+    
 
 include './models/ClubModel.php';
 /* include './models/DemandesModel.php'; */
@@ -59,6 +57,7 @@ if(false) { */
         }
     }  
     else{
+        
         $listtodos = $todoModel -> listTodo();
         $listclubs = $clubMdl -> listClubs();
         
@@ -81,6 +80,10 @@ else{
             }
         }
     }else{
+        if($_GET['c']==="demande"){
+            $id=$_GET['id'];
+            require_once PROJ_DIR . "/views/pages/demande.php";
+        }
         $clubslist = $clubCtl->listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }

@@ -1,3 +1,8 @@
+<?php
+ $id=$_GET['id'];
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +31,7 @@
     <main>
         <section class="navbar">
             <div class="youcode_logo">
-                <a href="../index.html"> <img src="../image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="demande.php"> <img src="../image/youcode_logo.png" alt="youcode_logo"></a>
                
                 <h3>Clubs</h3>
             </div>
@@ -43,7 +48,7 @@
               
             </div>
             <div class="decouvrir_btn">
-                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="demande.php">Demande</a></button>
+                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="<?php echo 'demande.php?id='.$id ?>">Demande</a></button>
                 <div class="button-background"></div>
             </div>
             <div class="about_club">
@@ -238,15 +243,6 @@
                     </div>
                    
                 </div>
-                <!-- <div class="activite">
-                    <h3>Title</h3>
-                </div>
-                <div class="activite">
-                    <h3>Title</h3>
-                </div>
-                <div class="activite">
-                    <h3>Title</h3>
-                </div> -->
                 
             </div>
         </section>
