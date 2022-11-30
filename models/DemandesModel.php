@@ -40,6 +40,11 @@ class DemandesModel extends dbh{
         return $stmt->execute()? true : false;
         
     }
+    public function demande($nom_complet,$age,$email,$membre_role,$id_club){
+        $sql = "insert into demande (nom_complet,age,email,membre_role,id_club) values(?,?,?,?,?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$nom_complet,$age,$email,$membre_role,$id_club]);
+    }
 
     
 
