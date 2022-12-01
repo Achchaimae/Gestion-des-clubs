@@ -20,6 +20,7 @@ $todoModel = new todoModel();
 $loginModel = new signupModel();
 $clubCtl = new ClubsContr();
 $demandesCtl = new DemandesContr();
+$demandeMdl = new DemandesModel();
 
 
 /* unset($_SESSION["admin"]); */
@@ -81,10 +82,6 @@ else{
             }
         }
     }else{
-        if($_GET['c']==="demande"){
-            $id=$_GET['id'];
-            require_once PROJ_DIR . "/views/pages/demande.php";
-        }
         $clubslist = $clubCtl->listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }

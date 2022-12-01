@@ -38,11 +38,7 @@ class DemandesContr {
         header('Location: ./?c=demandes');
     }
 
-    public function save($data) 
-    {
-        $this->model->save($data['nom_complet'],$data['class'],$data['age'],$data['email'],$data['membre_role'],$data['id_club']);
-        header('Location: http://localhost/club');
-    }
+   
 
     
 

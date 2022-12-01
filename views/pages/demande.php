@@ -1,11 +1,25 @@
 <?php
 // include '../../controlers/DemandesContr.class.php';
-// require_once './controlers/DemandesContr.class.php';
+include '../../controlers/DemandeContr.php';
 $values = extract($_POST);
+// die(empty($_GET['id']));
+//this for security 
+if(empty($_GET['id']) || !isset($_GET['id'] )) return header('Location: http://localhost/Gestion-des-clubs/views/pages/');
+
+
+$id = $_GET['id'];
+$instant = new DemandeContr();
+
+$res = $instant->isClubExist($id);
+// die($res);
+$res ? "ok" : header('Location: http://localhost/Gestion-des-clubs/views/pages/');
+
+
+
 
  if(isset($submit)) { 
     
-    if(empty($email) || empty($password) || empty($age) || empty($id_club) )
+    if(empty($email) || empty($classe) || empty($age) || empty($id_club) || empty($name) )
     {
     echo '<script language="javascript" type="text/javascript"> ';
     echo 'alert("message error Inserted")';//msg
@@ -13,13 +27,12 @@ $values = extract($_POST);
     }
     else {
     
-        $instant = new DemandesContr();
+        
         $arr = array(
-            'nom_complet' => $nom_complet,
-            'class' => $class,
+            'nom_complet' => $name,
+            'class' => $classe,
             'age' => $age,
             'email' => $email,
-            'membre_role' => $membre_role,
             'id_club' => $id_club
         );
         $instant->save($arr);
@@ -63,14 +76,14 @@ $values = extract($_POST);
                 <div class="img_log">
                     <img src="../image/login_man.png" alt="">
                 </div>
-                <form class="demande_form" method="POST">
+                <form  class="demande_form" method="POST">
               
                    
-                    <input type="hidden" name="id_club" value="<?php echo $_GET['id'] ?>">
+                    <input type="hidden" name="id_club" value="<?= $_GET['id'] ?>">
                     <input type="text" name="name" placeholder="FULL NAME">
                     <input type="date" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">
-                    <input type="text" name="password" placeholder="CLASSE">
+                    <input type="text" name="classe" placeholder="CLASSE">
                     <input type="submit" value="envoyer" id="login_btn" name="submit">
                 </form>
             
