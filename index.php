@@ -12,6 +12,7 @@ include './models/DemandesModel.php';
 include './models/CheckLogin.class.php';
 include './controlers/ClubsContr.class.php';
 include './controlers/DemandesContr.class.php';
+include './controlers/MembresContr.php';
 
 
 $clubMdl = new ClubModel();
@@ -19,6 +20,7 @@ $todoModel = new todoModel();
 $loginModel = new signupModel();
 $clubCtl = new ClubsContr();
 $demandesCtl = new DemandesContr();
+$membresCtl = new MembresContr();
 
 
 /* unset($_SESSION["admin"]); */
@@ -43,8 +45,13 @@ if(false) { */
             }
         }else if($_GET['c'] === "membres"){
             if(isset($_GET['a'])){
+                
+                $allmembers = $clubMdl->getAllMembersRows();
+                require_once PROJ_DIR . "/views/pages/membres.php";
+                
                 $action=$_GET['a'];
-                $demandesCtl -> $action(); 
+                $membresCtl -> $action();
+
             }else{
                 $allmembers = $clubMdl->getAllMembersRows();
                 
@@ -62,7 +69,6 @@ if(false) { */
         }
     }  
     else{
-        
         
         require_once PROJ_DIR . "/views/pages/admin.php";
     }

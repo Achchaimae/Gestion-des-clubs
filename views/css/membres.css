@@ -135,3 +135,24 @@ button{
 .left{
     width: 50%;
 }
+
+.membrebg{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.membre{
+    background-color: #5E87F5;
+    position: relative;
+    width: 40vw;
+    padding: 40px;
+    border-radius: 20px;
+
+}

@@ -35,8 +35,9 @@ require_once PROJ_DIR . "/includes/header.php";
                         </h3>
                     </div>
                     <div class="right">
-                            
+                            <a href="?c=membres&a=membreForm&id=<?php echo $value["id_membre"]; ?>">
                             <img src="views/icons/edit.svg" class="svg" alt="" srcset="">
+                            </a>
                             <img src="views/icons/delete.svg" class="svg" alt="" srcset="">
                             <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
                         
