@@ -90,8 +90,15 @@ class ClubsContr {
         $id=$_GET['id'];
         $this->model->delete($id);
     }
-    public function test(){
-        $test= $this->model->getClubMembersCount(1);
-        var_dump($test);
-    }
+
+    public function listClubs(){
+        
+        $clubslist = $this->model->listClubs();
+        
+        return $clubslist;
+    
+    
+}
+
+
 } 

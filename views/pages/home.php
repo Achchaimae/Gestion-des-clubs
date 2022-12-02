@@ -137,53 +137,24 @@ require_once PROJ_DIR . "/includes/users_header.php";
        
         <h1> You <span style="color:blue ;">Code</span> clubs</h1>
         <section class="clubs">
-            <div class="club_card">
-                <div class="club_img">
-                    <img src="views/image/gaming_club.png" alt="club image">
-                </div>
-                <div class="abt_club">
-                    <div class="p-wrapper">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi natus iste sequi commodi officia tempora eos architecto"
-                        </p>
-                    </div>
-                    <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
-                        <div class="button-background"></div>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($clubslist as $key => $value) {?>
+              <div class="club_card">
+              <div class="club_img">
+                  <img src="<?php echo $value["logo"]; ?>" alt="club image">
+              </div>
+              <div class="abt_club">
+                  <div class="p-wrapper">
+                      <p><?php echo $value["description"];?>
+                      </p>
+                  </div>
+                  <div class="decouvrir_btn">
+                      <button value="decouvrir" class="decouvrir" ><a href="views/pages/club.php?id=<?php echo $value["id"];?>">decouvrir</a></button>
+                      <div class="button-background"></div>
+                  </div>
+              </div>
+          </div>.
+           <?php } ?>
 
-            <div class="club_card">
-                <div class="club_img">
-                    <img src="views/image/gaming_club.png" alt="club image">
-                </div>
-                <div class="abt_club">
-                    <div class="p-wrapper">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi natus iste sequi commodi officia tempora eos architecto"
-                        </p>
-                    </div>
-                    <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
-                        <div class="button-background"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="club_card">
-                <div class="club_img">
-                    <img src="views/image/gaming_club.png" alt="club image">
-                </div>
-                <div class="abt_club">
-                    <div class="p-wrapper">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi natus iste sequi commodi officia tempora eos architecto"
-                        </p>
-                    </div>
-                    <div class="decouvrir_btn">
-                        <button value="decouvrir" class="decouvrir"><a href="views/pages/club.html">decouvrir</a></button>
-                        <div class="button-background"></div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
     <script type="text/javascript">

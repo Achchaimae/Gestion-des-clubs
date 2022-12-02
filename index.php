@@ -5,6 +5,7 @@ define("PROJ_DIR", dirname(__FILE__));
     /* unset($_SESSION['login']); */
    
 
+
 include './models/ClubModel.php';
 /* include './models/DemandesModel.php'; */
 include './models/TodoModel.php';
@@ -20,7 +21,11 @@ $todoModel = new todoModel();
 $loginModel = new signupModel();
 $clubCtl = new ClubsContr();
 $demandesCtl = new DemandesContr();
+
+$demandeMdl = new DemandesModel();
+
 $membresCtl = new MembresContr();
+
 
 
 /* unset($_SESSION["admin"]); */
@@ -69,6 +74,11 @@ if(false) { */
         }
     }  
     else{
+
+     //   $listtodos = $todoModel -> listTodo();
+     //   $listclubs = $clubMdl -> listClubs();
+
+        
         
         require_once PROJ_DIR . "/views/pages/admin.php";
     }
@@ -89,6 +99,7 @@ else{
             }
         }
     }else{
+        $clubslist = $clubCtl->listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }
     

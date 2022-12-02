@@ -16,7 +16,7 @@ class DemandesModel extends dbh{
         $sql = "select * from demande where id_demande = $id_demande";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
-        $results = $stmt->fetch();
+         
        return $results;
     }
 
@@ -27,12 +27,11 @@ class DemandesModel extends dbh{
         $stmt->execute();
         
     }
-    public function saveMember($nom_complet,$class,$age,$email,$membre_role,$id_club){
-        
-        $sql = "insert into membre (nom_complet,class,age,email,membre_role,id_club) values (?,?,?,?,?,?)";
+   
+    public function demande($nom_complet,$age,$email,$membre_role,$id_club){
+        $sql = "insert into demande (nom_complet,age,email,membre_role,id_club) values(?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$nom_complet,$class,$age,$email,$membre_role,$id_club]);
-        
+        $stmt->execute([$nom_complet,$age,$email,$membre_role,$id_club]);
     }
 
     

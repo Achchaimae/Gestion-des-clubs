@@ -141,14 +141,7 @@ section{
     height: 500px;
 
 }
-.event_img{
-   -webkit-mask-image: url(
-    data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRjAwNjYiIGQ9Ik01MS4xLC01NS4yQzY3LjUsLTQ3LjIsODIuNywtMzIuMyw4Mi40LC0xN0M4Mi4xLC0xLjgsNjYuMiwxMy42LDU1LjUsMzEuOUM0NC44LDUwLjEsMzkuMiw3MS4yLDI1LjEsODJDMTEsOTIuOCwtMTEuNiw5My4zLC0yNyw4My42Qy00Mi40LDczLjksLTUwLjcsNTMuOSwtNTcuNiwzNi4xQy02NC41LDE4LjIsLTcwLDIuNSwtNjkuMSwtMTMuOEMtNjguMSwtMzAsLTYwLjcsLTQ2LjcsLTQ4LjEsLTU1LjNDLTM1LjUsLTYzLjksLTE3LjcsLTY0LjUsLTAuMiwtNjQuM0MxNy40LC02NC4xLDM0LjgsLTYzLjIsNTEuMSwtNTUuMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K
-    );
-   -webkit-mask-repeat: no-repeat;
-    width: 100%;
-   
-}
+
 .semaine_tag{
     color: #0b1bcf;
     position: left;
@@ -196,13 +189,17 @@ section{
     display: flex;
     justify-content: space-between;
     align-items:center;
+    background-color:#cfdcff96 !important;
     margin: 4rem;
     padding: 2rem;
+    border-radius: 12px;
+    transition: all .5s ease;
+
 }
 .club_card:hover{
-    background-color:#cfdcff96;
     box-shadow: 5px 5px 5px #4e69c39d;
     border-radius: 12px;
+    transform: scale(1.02);
 }
 
 .club_img img{

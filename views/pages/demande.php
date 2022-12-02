@@ -1,3 +1,45 @@
+<?php
+// include '../../controlers/DemandesContr.class.php';
+include '../../controlers/DemandeContr.php';
+$values = extract($_POST);
+// die(empty($_GET['id']));
+//this for security 
+if(empty($_GET['id']) || !isset($_GET['id'] )) return header('Location: http://localhost/Gestion-des-clubs/views/pages/');
+
+
+$id = $_GET['id'];
+$instant = new DemandeContr();
+
+$res = $instant->isClubExist($id);
+// die($res);
+$res ? "ok" : header('Location: http://localhost/Gestion-des-clubs/views/pages/');
+
+
+
+
+ if(isset($submit)) { 
+    
+    if(empty($email) || empty($classe) || empty($age) || empty($id_club) || empty($name) )
+    {
+    echo '<script language="javascript" type="text/javascript"> ';
+    echo 'alert("message error Inserted")';//msg
+    echo '</script>';
+    }
+    else {
+    
+        
+        $arr = array(
+            'nom_complet' => $name,
+            'class' => $classe,
+            'age' => $age,
+            'email' => $email,
+            'id_club' => $id_club
+        );
+        $instant->save($arr);
+    }
+ }
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +48,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <!-- linking css style -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../css/userstyle.css">
     <!-- end linking css style -->
     
     <!-- link a font style -->
@@ -25,21 +67,24 @@
     <main class="demande_page">
         <section class="navbar demande_navbar">
             <div class="youcode_logo">
-                <a href="../index.html"><img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
+                <a href="home.php"><img src="../image/youcode_logo.png" alt="youcode_logo"></a>
                 
                 <h3>Clubs</h3>
             </div>
         </section>
         <section class="form">
                 <div class="img_log">
-                    <img src="../assets/image/login_man.png" alt="">
+                    <img src="../image/login_man.png" alt="">
                 </div>
-                <form action="#" class="demande_form">
-                    <input type="text" name="Full name" placeholder="FULL NAME">
+                <form  class="demande_form" method="POST">
+              
+                   
+                    <input type="hidden" name="id_club" value="<?= $_GET['id'] ?>">
+                    <input type="text" name="name" placeholder="FULL NAME">
                     <input type="date" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">
-                    <input type="text" name="password" placeholder="CLASSE">
-                    <input type="submit" value="envoyer" id="login_btn">
+                    <input type="text" name="classe" placeholder="CLASSE">
+                    <input type="submit" value="envoyer" id="login_btn" name="submit">
                 </form>
             
         </section>
