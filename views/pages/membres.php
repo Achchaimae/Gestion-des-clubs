@@ -26,12 +26,18 @@ require_once PROJ_DIR . "/includes/header.php";
                     </div>
                     <div class="middle">
                         <h2><?php echo $value["class"]; ?></h2>
-                        <h2>Club</h2>
-                        <h3>Role</h3>
+                        <h2>
+                        <?php echo($clubMdl->getClubName($value["id_club"])) ;
+                         ?>
+                        </h2>
+                        <h3>
+                        <?php echo $value["membre_role"]; ?>
+                        </h3>
                     </div>
                     <div class="right">
-                            
+                            <a href="?c=membres&a=membreForm&id=<?php echo $value["id_membre"]; ?>">
                             <img src="views/icons/edit.svg" class="svg" alt="" srcset="">
+                            </a>
                             <img src="views/icons/delete.svg" class="svg" alt="" srcset="">
                             <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
                         

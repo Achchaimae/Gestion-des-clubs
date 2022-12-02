@@ -1,7 +1,7 @@
 <?php 
-spl_autoload_register('myAutoLoader');
-function myAutoLoader($className){
-    $path = "./classes/";
+spl_autoload_register('myAutoLoaderM');
+function myAutoLoaderM($className){
+    $path = "./models/";
     $extention = ".class.php";
     $fullPath = $path.$className.$extention;
 

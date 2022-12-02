@@ -26,6 +26,15 @@ class ClubModel extends dbh{
         return $results;
       /*  return $stmt; */
     }
+    public function getClubName($id){
+        $sql = "select nom from club where id=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+        $result = $stmt->fetch();
+       
+        return $result["nom"];
+      /*  return $stmt; */
+    }
 
     public function getClubMembersID($id_club){
         
@@ -102,11 +111,30 @@ class ClubModel extends dbh{
     }
 
     public function updateClub($nom,$description,$id,$newrepID,$fileDestination){
-       
+
+        $club = $this->getClub($id);
+        if (isset($club['rep'])) {
+            $oldRep = $this->getClubRepName($id);
+         
+            $sql = "update membre SET membre_role='membre' WHERE nom_complet='$oldRep'";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
+        /* }else {
+            $repName = 'no rep';
+        */} 
+            
+
             $sql = "update club SET nom= '$nom',description='$description',rep='$newrepID',logo='$fileDestination' WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
-            return $id;
+
+
+            $sql = "update membre SET membre_role='rep' WHERE id_membre=$newrepID";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute();
+
+            
+            /* return $id; */
         }
     
     public function saveReq($nom,$description,$id,$newrepID){
@@ -114,7 +142,21 @@ class ClubModel extends dbh{
             $sql = "update club SET nom= '$nom',description='$description',rep=$newrepID WHERE id=$id";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
+
+            
+            
             return $id;
+        }
+    
+    
+    public function updateMembersCount($id){
+       
+        $club=$this->getClub($id);
+        $newMembersCount = $club['membres']+1;
+        
+        $sql = "update club SET membres= '$newMembersCount' WHERE id=$id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
         }
     
     

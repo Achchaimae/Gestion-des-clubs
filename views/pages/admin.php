@@ -1,7 +1,8 @@
 <?php
 
 require_once PROJ_DIR . "/includes/header.php";
-
+$listtodos = $todoModel -> listTodo();
+$listclubs = $clubMdl -> listClubs();
 ?>
 <link rel="stylesheet" href="views/css/styles.css">
 <div class="main-container">
@@ -30,7 +31,9 @@ require_once PROJ_DIR . "/includes/header.php";
                         <div class="infos">
                             <h4 class="club_name"> <?php echo $value["nom"]; ?></h4>
                             <p class="members">
-                                members: <?php echo $value["membres"]; ?>
+                                members: <?php 
+                                echo($clubMdl ->getClubMembersCount($value["id"]));
+                                //echo $value["membres"]; ?>
                                
                             </p>
                         </div>
