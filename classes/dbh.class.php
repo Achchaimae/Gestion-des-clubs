@@ -5,7 +5,7 @@ class Dbh {
     private $user = "root";
     private $pwd = "root";
     private $dbName = "gestion3";
-
+ 
     protected function connect(){
         $dsn = 'mysql:host='.$this->host.';dbname='. $this->dbName;
         $pdo = new PDO($dsn,$this->user,$this->pwd);
