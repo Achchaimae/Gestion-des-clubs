@@ -34,6 +34,13 @@ class MembresContr {
         $this->model->saveMembre($id_membre);
         
     }
+    public function deleteMembre(){
+        
+        $id_membre = $_GET['id'];
+        
+        $this->model->delete($id_membre);
+        
+    }
 
     
 

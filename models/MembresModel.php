@@ -31,6 +31,13 @@ class MembresModel extends dbh{
         $results = $stmt->fetch();
        return $results;
     }
+    public function delete($id_membre){
+
+        $sql = "delete from membre where id_membre=$id_membre";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+       
+}
 
     
 

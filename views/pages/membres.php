@@ -23,6 +23,7 @@ require_once PROJ_DIR . "/includes/header.php";
                     <div class="left" id="left">
                         <h1><?php echo $value["nom_complet"]; ?></h1>
                         <h4><?php echo $value["age"]; ?> ans</h4>
+                        <h4><?php echo $value["email"]; ?> ans</h4>
                     </div>
                     <div class="middle">
                         <h2><?php echo $value["class"]; ?></h2>
@@ -38,7 +39,10 @@ require_once PROJ_DIR . "/includes/header.php";
                             <a href="?c=membres&a=membreForm&id=<?php echo $value["id_membre"]; ?>">
                             <img src="views/icons/edit.svg" class="svg" alt="" srcset="">
                             </a>
+                            <a href="?c=membres&a=deleteMembre&id=<?php echo $value["id_membre"]; ?>">
                             <img src="views/icons/delete.svg" class="svg" alt="" srcset="">
+                            </a>
+                            
                             <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
                         
                     </div>
