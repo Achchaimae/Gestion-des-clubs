@@ -96,9 +96,11 @@ else{
                 $clubMembres = $clubMdl->getClubMembersRows($_GET['id']);
 
                 require_once PROJ_DIR . "/views/pages/club.php";
+
             }else if($_GET['a'] === "demande"){
                 
                 $club_id=$_GET['id'];
+                $club = $clubMdl->getClub($club_id);
                 /* $repname = $clubMdl->getClubRepName($_GET['id']);
                 $club = $clubMdl->getClub($_GET['id']);
                 $clubMembres = $clubMdl->getClubMembersRows($_GET['id']); */

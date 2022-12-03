@@ -276,6 +276,11 @@ border-radius: 12px;
 }
 h1{
     text-align: center;
+    /* color: white; */
+}
+.form h1{
+
+    color: white;
 }
 /* styling signup page */
 .SignUp_form{

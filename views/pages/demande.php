@@ -8,8 +8,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
     <main class="demande_page">
         <section class="navbar demande_navbar">
             <div class="youcode_logo">
-                <a href="../index.html"><img src="../assets/image/youcode_logo.png" alt="youcode_logo"></a>
-                
+            <a href="index.php"> <img src="views/image/youcode_logo.png" alt="youcode_logo"></a>
                 <h3>Clubs</h3>
             </div>
         </section>
@@ -18,6 +17,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                     <img src="../assets/image/login_man.png" alt="">
                 </div>
                 <form method="POST" action="?u=club&a=handleDemande&id=<?php echo $club_id; ?>" class="demande_form">
+                    <h1>Rejoindre le club : <?php echo $club['nom']; ?></h1>
                     <input type="text" name="nom_complet" placeholder="FULL NAME">
                     <input type="date" name="age" placeholder="AGE">
                     <input type="email" name="email" placeholder="EMAIL">
