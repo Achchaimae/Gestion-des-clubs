@@ -89,10 +89,23 @@ else{
             }
         }else if ($_GET['u'] === "club"){
             if($_GET['a'] === "showclub"){
+                $club_id=$_GET['id'];
                 $repname = $clubMdl->getClubRepName($_GET['id']);
                 $club = $clubMdl->getClub($_GET['id']);
                 $clubMembres = $clubMdl->getClubMembersRows($_GET['id']);
                 require_once PROJ_DIR . "/views/pages/club.php";
+            }else if($_GET['a'] === "demande"){
+                
+                $club_id=$_GET['id'];
+                /* $repname = $clubMdl->getClubRepName($_GET['id']);
+                $club = $clubMdl->getClub($_GET['id']);
+                $clubMembres = $clubMdl->getClubMembersRows($_GET['id']); */
+                require_once PROJ_DIR . "/views/pages/demande.php";
+           
+            }else if($_GET['a'] === "handleDemande"){
+                $club_id=$_GET['id'];
+                $demandesCtl->handleDemande($club_id);
+                
             }
         }
     }else{

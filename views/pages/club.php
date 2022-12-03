@@ -26,7 +26,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
               
             </div>
             <div class="decouvrir_btn">
-                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="demande.html">Demande</a></button>
+                <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="?u=club&a=demande&id=<?php echo $club_id; ?>">Demande</a></button>
                 <div class="button-background"></div>
             </div>
             <div class="about_club">

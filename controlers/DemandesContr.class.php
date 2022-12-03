@@ -39,7 +39,22 @@ class DemandesContr {
         $this->model->delete($id_demande);
         header('Location: ./?c=demandes');
     }
+    public function handleDemande($club_id){
 
+
+        $dateOfBirth = $_POST['age'];
+        $today = date("Y-m-d");
+        $diff = date_diff(date_create($dateOfBirth), date_create($today));
+        $age =$diff->format('%y');
+        
+        $this->model->saveDemande($_POST['nom_complet'],
+        $_POST['classe'],
+        $age,
+        $_POST['email'],
+        $club_id);
+        header('Location: ./index.php');
+        
+    }
     
 
 } 
