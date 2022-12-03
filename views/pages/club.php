@@ -1,27 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    
-    <!-- linking css style -->
-    <link rel="stylesheet" href="style.css">
-    <!-- end linking css style -->
-    
-    <!-- link a font style -->
-         <!-- Poppins font -->
-         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-             <!-- rock Salt font -->
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">  
-             <!-- end linking a font style -->
-    <title>YouCode Clubs</title>
-    <link rel="icon" type="image/x-icon" href="../assets/image/icon_web.png">
-</head>
+<?php
+
+require_once PROJ_DIR . "/includes/users_header.php";
+
+
+?>
 <body>
     <main>
         <section class="navbar">
@@ -34,7 +16,8 @@
         </section>
         <section>
             <div class="club_title">
-                <h1>  Club d'Art</h1>
+                <h1>
+                Club : <?php echo $club["nom"]; ?> </h1>
             </div>
         </section>
         <section class="club_container">
@@ -49,126 +32,29 @@
             <div class="about_club">
                 <div class="club_desc"> 
                     <h1> Description </h1><br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima, dolorem voluptate exercitationem laboriosam maxime illum commodi ut praesentium recusandae accusamus provident corporis non est aspernatur maiores quis deserunt repellat?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem minima, dolorem voluptate exercitationem laboriosam maxime illum commodi ut praesentium recusandae accusamus provident corporis non est aspernatur maiores quis deserunt repellat?
+                    <p>
+                    
+                    <?php echo $club["description"]; ?>
                 </p>
                 </div>
                 <div class="club_membres">
                     <div>
                         <h3> Represantant</h3>
-                        <p>  Achchaimae khalaf</p>
+                        <p>  <?php echo $repname; ?></p>
                     </div>
                     <hr>
                     <ul> 
+<?php foreach ($clubMembres as $key => $value) { ?>
                         <li>
                             <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
+                                <img src="views/icons/test.png" alt="img">
                                 <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
+                                    <p><?php echo $value["nom_complet"]; ?></p>
+                                    <p><?php echo $value["class"]; ?></p>
                                 </div>
                             </div> 
                         </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="club_membre">
-                                <img src="../assets/image/membre_img.jpg" alt="membre_img">
-                                <div class="club_membre_info">
-                                    <p>FULL name</p>
-                                    <p>classe</p>
-                                </div>
-                            </div> 
-                        </li>
-                    
+<?php } ?>
                     </ul>
                     <!-- <ul>
                         <li> 

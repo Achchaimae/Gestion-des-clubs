@@ -87,8 +87,16 @@ else{
                 require_once PROJ_DIR . "/views/pages/logout.php";
 
             }
+        }else if ($_GET['u'] === "club"){
+            if($_GET['a'] === "showclub"){
+                $repname = $clubMdl->getClubRepName($_GET['id']);
+                $club = $clubMdl->getClub($_GET['id']);
+                $clubMembres = $clubMdl->getClubMembersRows($_GET['id']);
+                require_once PROJ_DIR . "/views/pages/club.php";
+            }
         }
     }else{
+        $listclubs = $clubMdl -> listClubs();
         require_once PROJ_DIR . "/views/pages/home.php";
     }
     
