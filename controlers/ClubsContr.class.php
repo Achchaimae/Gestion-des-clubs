@@ -15,8 +15,9 @@ class ClubsContr {
     }
 
     public function ClubForm(){
-
         $id = intval($_GET["id"]);
+        $membresCount = $this->model->getClubMembersCount($id);
+        
         //Get one club
         $club = $this->model->getClub($id);
         if (isset($club['rep'])) {

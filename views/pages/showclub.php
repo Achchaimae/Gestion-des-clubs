@@ -12,7 +12,7 @@ require_once PROJ_DIR . "/includes/header.php";
                 <h1 class="club_name"><?php echo $club["nom"]; ?></h1>
                 <p class="member_count">members: 
                 <?php  
-                               echo $club["membres"];
+                               echo $membresCount;
                 ?>
                 </p>
                 <!-- <button class="modifier">modifier</button> -->

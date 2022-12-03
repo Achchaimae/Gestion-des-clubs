@@ -45,3 +45,15 @@ li{
     height: 25px;
     margin: 0 10px;
 }
+
+a {
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: inherit;
+    cursor: pointer;
+}
+.club_name{
+    font-weight: bold;
+    font-size: 30px;
+}

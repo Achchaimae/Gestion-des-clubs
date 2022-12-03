@@ -33,7 +33,7 @@ $listclubs = $clubMdl -> listClubs();
                             <p class="members">
                                 members: <?php 
                                 echo($clubMdl ->getClubMembersCount($value["id"]));
-                                //echo $value["membres"]; ?>
+                                ?>
                                
                             </p>
                         </div>
