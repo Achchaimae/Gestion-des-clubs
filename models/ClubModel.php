@@ -3,9 +3,9 @@ include_once PROJ_DIR . "/classes/dbh.class.php";
 class ClubModel extends dbh{
 
     public function createClub($nom,$description,$datecreation,$logo,$membres){
-        $sql = "insert into club (nom,description,date_creation,logo,membres) values(?,?,?,?,?)";
+        $sql = "insert into club (nom,description,date_creation,logo,membres,rep) values(?,?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$nom,$description,$datecreation,$logo,$membres]);
+        $stmt->execute([$nom,$description,$datecreation,$logo,$membres,0]);
     }
 
     public function listClubs(){
@@ -77,6 +77,7 @@ class ClubModel extends dbh{
         $stmt->execute();
         /* $stmt->fetchall();  */
         /* $clubMembers = $stmt->fetchall();   */
+        
         $result=$stmt->fetch();
         return $result["rep"];
     }
@@ -89,6 +90,7 @@ class ClubModel extends dbh{
         /* $stmt->fetchall();  */
         /* $clubMembers = $stmt->fetchall();   */
         $result=$stmt->fetch();
+        
         if (isset($result["nom_complet"])) {
             return $result["nom_complet"];
         }else return 'pas encors'; // put this back 
