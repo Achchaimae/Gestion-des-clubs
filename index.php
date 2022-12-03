@@ -46,11 +46,12 @@ if(false) { */
         }else if($_GET['c'] === "membres"){
             if(isset($_GET['a'])){
                 
+                $action=$_GET['a'];
+                $membresCtl -> $action();
                 $allmembers = $clubMdl->getAllMembersRows();
                 require_once PROJ_DIR . "/views/pages/membres.php";
                 
-                $action=$_GET['a'];
-                $membresCtl -> $action();
+                
 
             }else{
                 $allmembers = $clubMdl->getAllMembersRows();

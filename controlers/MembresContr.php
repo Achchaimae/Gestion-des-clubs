@@ -31,7 +31,7 @@ class MembresContr {
         
         $id_membre = $_GET['id'];
         
-        $membre=$this->model->saveMembre($id_membre);
+        $this->model->saveMembre($id_membre);
         
     }
 
