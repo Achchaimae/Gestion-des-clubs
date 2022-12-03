@@ -20,12 +20,19 @@ class MembresContr {
         require_once PROJ_DIR . "/views/pages/demandes.php";
     } */
     public function membreForm(){
-
-        
+        $id_membre = $_GET['id'];
+        $listClubs = $this->Clubsmodel->listClubs();
         $membre=$this->model->getMembre($_GET['id']);
         $clubName = $this->Clubsmodel->getClubName($membre["id_club"]);
         require_once PROJ_DIR . "/views/pages/membre.php";
        
+    }
+    public function updateMembre(){
+        
+        $id_membre = $_GET['id'];
+        
+        $membre=$this->model->saveMembre($id_membre);
+        
     }
 
     

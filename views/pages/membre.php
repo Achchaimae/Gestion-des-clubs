@@ -2,28 +2,23 @@
 <link rel="stylesheet" href="views/css/membres.css">
 
             <div class="membrebg">
+            <form  action="?c=membres&a=updateMembre&id=<?php echo $id_membre; ?>" method="POST" id="membreform" name="membreform" >
+
                 <div class="membre">
-                    <div class="left" id="left">
-                        <h1><?php echo $membre["nom_complet"]; ?></h1>
-                        <h4><?php echo $membre["age"]; ?> ans</h4>
-                    </div>
-                    <div class="middle">
-                        <h2><?php echo $membre["class"]; ?></h2>
-                        <h2>
-                        <?php echo $clubName ;
-                         ?>
-                        </h2>
-                        <h3>
-                        <?php echo $membre["membre_role"]; ?>
-                        </h3>
-                    </div>
-                    <div class="right">
-                            <a href="?c=membres">
-                            <img src="views/icons/edit.svg" class="svg" alt="" srcset="">
-                            </a>
-                            <img src="views/icons/delete.svg" class="svg" alt="" srcset="">
-                            <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
+                
+                <input type="text" name="nom_complet" value="<?php echo $membre["nom_complet"]; ?>">
+
+                <input type="text" name="age" value="<?php echo $membre["age"]; ?>">
+                <input type="text" name="class" value="<?php echo $membre["class"]; ?>">
+                <input type="text" name="email" value="<?php echo $membre["email"]; ?>">
+                
+                <select name="club" >
+                <?php foreach($listClubs as $key=>$value){ ?>
+                    <option value="<?php echo $value["id"]; ?>"><?php echo $value["nom"]; ?></option>
+                <?php } ?>
+                </select> 
                         
-                    </div>
                  </div>
+                 <button class="modifier"  value="submit" form="membreform">save</button>
+                 </form>
             </div>

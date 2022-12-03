@@ -21,7 +21,7 @@ require_once PROJ_DIR . "/includes/header.php";
             <div class="middle">
                 <h2 class="representant">represantant:</h2>
                 <!-- <p class="representant_name"> achchaimae khalaf</p> -->
-                <select name="newrep" id="cars">
+                <select name="newrep" >
 
 
                 <?php foreach($clubMembers as $key=>$value){ ?>

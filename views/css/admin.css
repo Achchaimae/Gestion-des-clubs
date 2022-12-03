@@ -1,3 +1,6 @@
+body{
+    color: white;
+}
 ul{
     display: flex;
     flex-direction: column;

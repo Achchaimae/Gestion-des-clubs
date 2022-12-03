@@ -19,6 +19,18 @@ class MembresModel extends dbh{
         $results = $stmt->fetch();
        return $results;
     }
+    public function saveMembre($id_membre){
+        $nom_complet = $_POST['nom_complet'];
+        $class = $_POST['class'];
+        $age = $_POST['age'];
+        $email = $_POST['email'];
+        $id_club = $_POST['club'];
+        $sql = "update membre SET nom_complet= '$nom_complet',class='$class',age='$age',email='$email',id_club='$id_club' WHERE id_membre=$id_membre ";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetch();
+       return $results;
+    }
 
     
 
