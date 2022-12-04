@@ -28,7 +28,7 @@ if(isset($_SESSION["login"])){
 if($_SESSION["login"] === 'admin') {
 /* if(false){
 if(false) { */
-
+    /* require_once PROJ_DIR . "/views/pages/admin.php"; */
     if(isset($_GET['c'])){
  
         if($_GET['c'] === "clubs"){

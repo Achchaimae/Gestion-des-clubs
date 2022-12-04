@@ -13,7 +13,7 @@ class TodoContr {
     
     public function addNewTodo($task){
      
-         $this->model->addTodo($task);
+         $this->model->add($task);
           header('Location: ./index.php');
         return;
     }
@@ -28,7 +28,7 @@ class TodoContr {
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){
             $id = intval($_GET["id"]);
             //Get one club
-            $this->model->DeleteTodo($id);
+            $this->model->Delete($id);
             header('Location: ./index.php');
             return;
         } else {
