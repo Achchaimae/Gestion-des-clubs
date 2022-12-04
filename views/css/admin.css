@@ -362,3 +362,9 @@ i,svg{
     justify-content: space-between;
 
 }
+.item-left{
+    width: 50%;
+}
+.item-middle{
+    width: 30%;
+}

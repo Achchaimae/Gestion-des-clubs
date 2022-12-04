@@ -1,21 +1,17 @@
 
 
     <div class="main-container">
-        <div class="center">
-            <div class="header">
-                <div class="search">
-                    <input type="text" placeholder="">
-                    <button class="fa-bg">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
+        <div class="items">
+        <div class="title">
+              <h3 class="h">Demandes :</h3>
+                        
             </div>
-            <div class="list">
+            <div class="item_info">
                 
                 
 <?php foreach($demandes as $key=>$value){ ?>
                
-                <div class="apprenant">
+                <div class="item">
                     <div class="left" id="left">
                         <h1><?php echo $value["nom_complet"]; ?></h1>
                         <h4><?php echo $value["age"]; ?> ans</h4>

@@ -21,8 +21,10 @@ class signupModel extends dbh{
                     }
        
     }
-    /* public function verifylogin($admin){
-        isset($_SESSION[$admin]);
-    } */
+    public function logout(){
+        unset($_SESSION['login']);
+        session_destroy();
+        header('Location: ./index.php');
+    }
 }
 ?>

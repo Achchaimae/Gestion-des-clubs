@@ -1,6 +1,3 @@
-<?php 
-$listtodos = $todoModel->listTodo();
-?>
 <div class="todo">
         <div class="header">
                 <div class="add-todo">

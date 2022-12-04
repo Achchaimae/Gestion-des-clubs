@@ -14,7 +14,7 @@ class TodoContr {
     public function addNewTodo($task){
      
          $this->model->add($task);
-          header('Location: ./index.php');
+        header('Location: ./index.php');
         return;
     }
   /*   public function listTodo(){
@@ -36,8 +36,5 @@ class TodoContr {
         }
         
     }
-    public function index(){
-        //var_dump(PROJ_DIR);
-        //require_once PROJ_DIR . "/views/clubs/index.php";
-    }
+    
 } 
