@@ -2,10 +2,10 @@
 require_once PROJ_DIR . "/includes/header.php";
 ?>
 
-<link rel="stylesheet" href="views/css/clubs.css">
 
 <div class="main-container">
-        <form action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" enctype="multipart/form-data" method="post" id="clubform">
+<div class="items">
+        <form class="form" action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" enctype="multipart/form-data" method="post" id="clubform">
         <div class="header">
             <div class="left">
                 
@@ -35,9 +35,9 @@ require_once PROJ_DIR . "/includes/header.php";
             <h2>description:</h2>
             <div class="textarea"></i>
                 <textarea name="description" form="clubform" ><?php echo $club["description"]; ?></textarea>
-                <button type="submit" class="modifier">
-                    <!-- <i class="fa-solid fa-save"></i> -->
-                </button>
+                <!-- <button type="submit" class="modifier">
+                    <i class="fa-solid fa-save"></i> 
+                </button> -->
 
             </div>
         </div>
@@ -75,6 +75,7 @@ require_once PROJ_DIR . "/includes/header.php";
             <a href="?c=clubs&a=delete&id=<?php echo $club["id"]; ?>">
             <button  class="modifier">supprimer club</button></a>
         </div>
+    </div>
     </div>
 <?php
 require_once PROJ_DIR . "/includes/footer.php";

@@ -3,7 +3,7 @@
 require_once PROJ_DIR . "/includes/header.php";
 
 ?>
-<link rel="stylesheet" href="views/css/membres.css">
+
     <div class="main-container">
         <div class="center">
             <div class="header">

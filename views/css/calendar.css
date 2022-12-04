@@ -51,7 +51,7 @@ section{
 }.calendar{
     height: fit-content;
     background-color: var(--bg-main);
-    border-radius: 10px;
+    border-radius: inherit;
     padding: 20px;
     position:relative;
     overflow: hidden;

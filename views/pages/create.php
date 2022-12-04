@@ -1,13 +1,13 @@
-<?php
-require_once PROJ_DIR . "/includes/header.php";
 
-?>
-<link rel="stylesheet" href="views/css/clubs.css">
-<link rel="stylesheet" href="views/css/create.css">
-<div class="section">
+
+
+
 <div class="main-container ">
+<div class="items">
+    
         <form action="?c=clubs&a=createNewClub" method="post" name="newClub" class="form" enctype="multipart/form-data">
-            <div class="line">
+        <h2>entrez les informations pour creer un nouveu club :</h2>    
+        <div class="line">
             <label for="nom">Nom du club:</label>
             <input type="text" name="nom">
             </div>
@@ -30,6 +30,3 @@ require_once PROJ_DIR . "/includes/header.php";
         </form>
     </div>
     </div>
-<?php
-require_once PROJ_DIR . "/includes/footer.php";
-?>

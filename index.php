@@ -22,13 +22,14 @@ $clubCtl = new ClubsContr();
 $demandesCtl = new DemandesContr();
 $membresCtl = new MembresContr();
 
-
 /* unset($_SESSION["admin"]); */
 if(isset($_SESSION["login"])){
 if($_SESSION["login"] === 'admin') {
 /* if(false){
 if(false) { */
-    /* require_once PROJ_DIR . "/views/pages/admin.php"; */
+    require_once PROJ_DIR . "/includes/header.php";
+    
+    
     if(isset($_GET['c'])){
  
         if($_GET['c'] === "clubs"){
@@ -73,7 +74,10 @@ if(false) { */
         
         require_once PROJ_DIR . "/views/pages/admin.php";
     }
-    
+
+    require_once PROJ_DIR . "/views/pages/adminRight.php";
+    require_once PROJ_DIR . "/includes/footer.php";
+
 }}
 // no login
 else{
