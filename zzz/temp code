@@ -1,0 +1,99 @@
+
+if(!isset($_SESSION["admin"]))  {
+    if (!isset($_GET['c'])) {
+        require_once PROJ_DIR . "/includes/users_header.php";
+        require_once PROJ_DIR . "/views/pages/home.php";
+    }else   {
+                if($_GET['c'] === 'log'){
+
+                    if( $_GET['a'] === 'login'){
+            
+                        require_once PROJ_DIR . "/includes/users_header.php";
+                        require_once PROJ_DIR . "/views/pages/signup.php";
+            
+                    }else if( $_GET['a'] === 'logout'){
+                        unset($_SESSION["login"]);
+                        
+                        /* require_once PROJ_DIR . "/views/pages/logout.php"; */
+                        header("Location: index.php");
+                    if(isset($_SESSION["login"])){
+                        unset($_SESSION["login"]);
+                        session_destroy();
+                        require_once PROJ_DIR . "index.php";
+                    }
+                    }else if( $_GET['a'] === 'checkpassword'){
+                        $login= $_POST['login'];
+                        $password = $_POST['password'];
+                        if($loginModel->checkLogin($login,$password)){
+                            
+                                
+                            $_SESSION["login"] = $login;
+                            
+                            /* include PROJ_DIR . "/views/pages/xxx.php"; */
+                            /* header("location: index.php"); */
+                            $Viewcls->updateAdmin();
+
+                        } else{
+                            require_once PROJ_DIR . "/includes/users_header.php";
+                            require_once PROJ_DIR . "/views/pages/signup.php";
+                        }
+            
+                    }
+                }
+           
+            }
+                                }
+
+
+if(isset($_GET['c'])){
+   
+    if($_GET['c'] === "Clubs"){
+
+        
+        if(isset($_GET['a'])){
+            if($_GET['a'] === "newClubForm"){
+                $clubCtl->newClubForm();  
+               
+                return;
+            }
+            if($_GET['a'] === "createNewClub"){
+                $clubCtl->createNewClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$_POST["logo"]);
+                
+                return;
+            }
+            if($_GET['a'] === "delete"){
+                $ClubMdl->deleteClub($_GET["id"]);
+                header('Location: ./index.php');
+                return;
+            }
+            if($_GET['a'] === "edit"){
+                $clubCtl->editClub();
+                return;
+            }
+            if($_GET['a'] === "save"){
+                $ClubMdl->saveClub();
+                return;
+            }
+        }  
+        
+        $clubCtl->index();
+        return;
+    }
+    else if( $_GET['c'] === "Todo"){
+
+        if($_GET['a'] === "add"){
+        
+      $TodoCtl->addNewTodo($_POST["task"]);
+    }
+      /*   if($_GET['a'] === "list"){
+        
+      $TodoCtl->showTodo();
+      
+    } */
+    if($_GET['a'] === "delete"){
+        
+        $TodoCtl->deleteTodo();
+         
+      }
+} 
+} //global variable is not set
