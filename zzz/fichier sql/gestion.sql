@@ -15,7 +15,7 @@ rep int
 create table evenement (
 id int not null auto_increment primary key,
 id_club int,
-foreign key (id_club) references club(id) ON DELETE SET NULL ,
+foreign key (id_club) references club(id) ON DELETE CASCADE ,
 nom varchar(100),
 event_date date,
 lieu varchar(100),
@@ -35,7 +35,7 @@ class varchar(100),
 age int,
 email varchar(100),
 id_club int,
-foreign key (id_club) references club(id) ON DELETE SET NULL
+foreign key (id_club) references club(id) ON DELETE CASCADE
 );
 
 create table ToDo(
@@ -52,7 +52,7 @@ age int,
 email varchar(100),
 membre_role varchar(100),
 id_club int ,
-foreign key (id_club) references club(id) ON DELETE SET NULL
+foreign key (id_club) references club(id) ON DELETE CASCADE
 );
 
 

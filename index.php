@@ -130,8 +130,8 @@ if(isset($_SESSION['login'])){
     if (isset($_GET['c'])) {
     if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
         $loginModel->logout();
-        /* require_once PROJ_DIR . "/views/pages/logout.php";
-        header('Location: index.php'); */
+        
+        
 }
 }
 }
