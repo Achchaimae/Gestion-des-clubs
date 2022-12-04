@@ -1,25 +1,20 @@
-<?php
-require_once PROJ_DIR . "/includes/header.php";
-?>
 
-<link rel="stylesheet" href="views/css/clubs.css">
+
 
 <div class="main-container">
-        <form  action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="POST" id="clubform" name="clubform" enctype="multipart/form-data">
+<div class="items">
+        <form class="form" action="?c=clubs&a=save&id=<?php echo $club["id"]; ?>" method="POST" id="clubform" name="clubform" enctype="multipart/form-data">
 
         <div class="header">
             <div class="left">
+                <h2>Nom :</h2>
                 <input type="text" name="nom" value="<?php echo $club["nom"]; ?>">
                 
-                <p class="member_count">members: 
-                <?php  
-                               echo $club["membres"];
-                ?>
-                </p>
+                
                 <!-- <button class="modifier">modifier</button> -->
             </div>
             <div class="middle">
-                <h2 class="representant">represantant:</h2>
+                <h2 class="representant">represantant :</h2>
                 <!-- <p class="representant_name"> achchaimae khalaf</p> -->
                 <select name="newrep" >
 
@@ -45,13 +40,13 @@ require_once PROJ_DIR . "/includes/header.php";
             <h2>description:</h2>
             <div class="textarea"></i>
                 <textarea name="description" form="clubform" ><?php echo $club["description"]; ?></textarea>
-                <button type="submit" class="modifier">
-                    <!-- <i class="fa-solid fa-save"></i> -->
-                </button>
+                <!-- <button type="submit" class="modifier">
+                   <i class="fa-solid fa-save"></i>
+                </button> -->
 
             </div>
         </div>
-        </form>
+        
         <div class="events">
    <!--          <h2>events:</h2>
 
@@ -87,6 +82,7 @@ require_once PROJ_DIR . "/includes/header.php";
             <button  class="modifier">supprimer club</button></a>
         </div>
         </form>
+    </div>
     </div>
 <?php
 require_once PROJ_DIR . "/includes/footer.php";

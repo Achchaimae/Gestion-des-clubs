@@ -1,8 +1,4 @@
-<?php
 
-require_once PROJ_DIR . "/includes/header.php";
-
-?>
 
     <div class="main-container">
         <div class="center">
@@ -53,5 +49,3 @@ require_once PROJ_DIR . "/includes/header.php";
             </div>
         </div>
     </div>
-</body>
-</html>

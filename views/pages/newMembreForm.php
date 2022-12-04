@@ -2,20 +2,20 @@
 
 
             <div class="membrebg">
-            <form  action="?c=membres&a=updateMembre&id=<?php echo $id_membre; ?>" method="POST" id="membreform" name="membreform" >
+            <form  action="?c=membres&a=saveNewMembre" method="POST" id="membreform" name="membreform" >
 
                 <div class="membre">
                 <label for="nom_complet">Nom Cmoplet :
-                <input type="text" name="nom_complet" value="<?php echo $membre["nom_complet"]; ?>">
+                <input type="text" name="nom_complet" >
                 </label>
                 <label for="age">Age :
-                <input type="text" name="age" value="<?php echo $membre["age"]; ?>">
+                <input type="text" name="age" >
                 </label>
                 <label for="class">Classe :
-                <input type="text" name="class" value="<?php echo $membre["class"]; ?>">
+                <input type="text" name="class" >
                 </label>
                 <label for="email">Email :
-                <input type="text" name="email" value="<?php echo $membre["email"]; ?>">
+                <input type="text" name="email" >
                 </label>
                 <label for="club">Club :
                 <select name="club" >

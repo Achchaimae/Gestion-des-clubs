@@ -11,7 +11,7 @@
             </div> -->
             <div class="title">
               <h3 class="h">Membres :</h3>
-              <a href="?c=clubs&a=newClubForm">
+              <a href="?c=membres&a=newMembreForm">
                 <!-- <svg class="add-button" width="512px" height="512px" viewBox="-32 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg> -->
                 <div class="add-button">
                 <img src="views/icons/addbold.svg" class="svg" alt="" srcset="">
@@ -26,7 +26,7 @@
                     <div class="item-left" id="left">
                         <h1><?php echo $value["nom_complet"]; ?></h1>
                         <h4><?php echo $value["age"]; ?> ans</h4>
-                        <h4><?php echo $value["email"]; ?> ans</h4>
+                        <h4><?php echo $value["email"]; ?></h4>
                     </div>
                     <div class="item-middle">
                         <h2><?php echo $value["class"]; ?></h2>

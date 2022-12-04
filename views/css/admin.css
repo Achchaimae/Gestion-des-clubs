@@ -274,19 +274,17 @@ i,svg{
 }
 
 .line input,textarea{
-    width: 20vw;
+    width: 30vw;
     height: 40px;
     padding: 5px;
 }
 .line textarea{
     resize: none;
-    height: 100px;
+    min-height: 100px;
     
 }
 
-h2{
-    margin-bottom: 40px;
-}
+
 
 .description{
     display: flex;
@@ -298,13 +296,16 @@ h2{
 
 .description textarea{
     width: 100%;
-    min-height: 100px;
+    
     resize: none;
     padding: 5px;
     position: relative;
+    height: 250px;
+    
 }
 .textarea{
     width: 100%;
+    
 }
 .header{
     display: flex;
@@ -317,4 +318,47 @@ h2{
 .right .modifier i{
 
     font-size: 15px;
+}
+.upload{
+    
+    width: 90px;
+}
+.membrebg{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.membre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #5E87F5;
+    position: relative;
+    width: 40vw;
+    height: 25vw;
+    padding: 40px;
+    border-radius: 20px;
+}
+.membre input{
+    width: 20vw;
+    height: 30px;
+    padding: 5px;
+}
+.svg {
+    width: 20px;
+    height: 20px;
+}
+.item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
