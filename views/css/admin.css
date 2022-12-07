@@ -223,16 +223,14 @@ i,svg{
 }
 .logoimg{
     /* margin: 10% 10%; */
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     border-radius: var(--radius);
    
 }
 .logo{
-    width: 200px;
     
-    
-    
+    height: 140px;
 }
 .modifier {
     display: block;
