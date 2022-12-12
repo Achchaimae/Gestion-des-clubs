@@ -29,7 +29,7 @@ if($_SESSION["login"] === 'admin') {
 if(false) { */
     require_once PROJ_DIR . "/includes/header.php";
     
-    $listtodos = $todoModel->listTodo();
+    
     if(isset($_GET['c'])){
  
         if($_GET['c'] === "clubs"){
@@ -69,6 +69,11 @@ if(false) { */
             }else{
                 $demandesCtl -> listDemandes();
             }
+        }else if (isset($_GET['c'])) {
+            if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
+                $loginModel->logout();
+                header('Location: index.php');   
+        }
         }
     }  
     else{
@@ -125,13 +130,3 @@ else{
     
 }
 
-/* header('Location: ./index.php'); */
-if(isset($_SESSION['login'])){
-    if (isset($_GET['c'])) {
-    if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
-        $loginModel->logout();
-        
-        
-}
-}
-}
