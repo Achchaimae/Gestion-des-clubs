@@ -52,8 +52,7 @@ if(false) { */
                 $membresCtl -> $action();
                 $allmembers = $clubMdl->getAllMembersRows();
                 require_once PROJ_DIR . "/views/pages/membres.php";
-                
-                
+
 
             }else{
                 $allmembers = $clubMdl->getAllMembersRows();
@@ -69,6 +68,12 @@ if(false) { */
             }else{
                 $demandesCtl -> listDemandes();
             }
+        }else if (isset($_GET['c'])) {
+            if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
+                $loginModel->logout();
+                
+                
+        }
         }
     }  
     else{
