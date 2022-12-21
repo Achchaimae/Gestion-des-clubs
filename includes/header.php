@@ -40,7 +40,7 @@ $demandes = $demandesMdl -> listDemandes();
                 
                 <img src="views/icons/bell.svg" alt="" srcset="">
             </i></a></li>
-            <li><a href="./index.php"><img src="views/icons/calendar.svg" alt="" srcset=""></i></a></li>
+            <li><a href="./?c=evenement"><img src="views/icons/calendar.svg" alt="" srcset=""></i></a></li>
             
         </ul>
         <a href="?c=log&a=logout">

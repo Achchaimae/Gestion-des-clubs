@@ -13,6 +13,7 @@ include './models/CheckLogin.class.php';
 include './controlers/ClubsContr.class.php';
 include './controlers/DemandesContr.class.php';
 include './controlers/MembresContr.php';
+include './controlers/evenementContr.php';
 
 
 $clubMdl = new ClubModel();
@@ -69,12 +70,25 @@ if(false) { */
             }else{
                 $demandesCtl -> listDemandes();
             }
+        }else if($_GET['c'] === "evenement"){
+            $evenementCtl = new evenementContr();
+            if(isset($_GET['a'])){
+                $action=$_GET['a'];
+                $evenementCtl -> $action(); 
+            }else{
+                $allevents = $evenementCtl->getAllEventRows();
+                
+                require_once PROJ_DIR . "/views/pages/evenements.php";
+               
+            }
+            
         }else if (isset($_GET['c'])) {
             if(($_GET['c'] === "log") && ($_GET['a'] === "logout")){
                 $loginModel->logout();
                 header('Location: index.php');   
+            }
         }
-        }
+         
     }  
     else{
         
