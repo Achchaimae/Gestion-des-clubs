@@ -33,9 +33,8 @@ require_once PROJ_DIR . "/includes/users_header.php";
                 <div class="club_desc"> 
                     <h1> Description </h1><br>
                     <p>
-                    
                     <?php echo $club["description"]; ?>
-                </p>
+                    </p>
                 </div>
                 <div class="club_membres">
                     <div>
@@ -44,7 +43,7 @@ require_once PROJ_DIR . "/includes/users_header.php";
                     </div>
                     <hr>
                     <ul> 
-<?php foreach ($clubMembres as $key => $value) { ?>
+                        <?php foreach ($clubMembres as $key => $value) { ?>
                         <li>
                             <div class="club_membre">
                                 <img src="views/icons/test.png" alt="img">
@@ -54,38 +53,8 @@ require_once PROJ_DIR . "/includes/users_header.php";
                                 </div>
                             </div> 
                         </li>
-<?php } ?>
+                    <?php } ?>
                     </ul>
-                    <!-- <ul>
-                        <li> 
-                            <ul>
-                                <li>
-                                    <h3> Represantant</h3>
-                                </li>
-                                <li>Achchaimae khalaf</li>
-                                <li>Ada lovelece</li>
-                            </ul>
-                        </li>
-                        <hr>
-                        <li>
-                            <ul>
-                                <li>
-                                    <h3>Membres</h3>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>Achchaimae khalaf</li>
-                                        <li>Ada lovelece</li>
-                                        <li>Achchaimae khalaf</li>
-                                        <li>Ada lovelece</li>
-                                        <li>Achchaimae khalaf</li>
-                                        <li>Ada lovelece</li>
-                                        <li>Achchaimae khalaf</li>
-                                        <li>Ada lovelece</li> 
-                                    </ul>
-                            </ul>
-                        </li>
-                    </ul> -->
                 </div>
                 
             </div>

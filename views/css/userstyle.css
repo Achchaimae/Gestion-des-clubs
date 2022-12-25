@@ -391,9 +391,10 @@ padding-top: 3px;
 .about_club{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     justify-items: center;
     gap:2rem;
+    flex-wrap: wrap;
 }
 .club_desc{
     display: flex;
@@ -410,12 +411,26 @@ padding-top: 3px;
     text-align: center;
 }
 .club_membres{
-    width: 30vw;
+    width: 30%;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
 }
+@media screen and (max-width: 768px){
+    .about_club{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .club_desc{
+        width: 80vw;
+    }
+    .club_membres{
+        width: fit-content;
+    }
+}
+    
 
 .club_membres li{
     list-style-type: none;
@@ -429,12 +444,18 @@ line-height: 28px;
 height: 1em;
 }
 .galerie{
-    display: flex;
+   display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-evenly;
-   gap: 2rem;
-
+   justify-content: space-around;
+   gap: 3rem;
+}@media screen and (max-width: 768px){
+    .galerie{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20rem;
+    }
 }
 .club_membre{
     display: flex;
@@ -508,8 +529,8 @@ h1{
 }
 .activite{
    
-    
-    margin: 50px;
+    display: flex;
+    /* margin: 50px; */
     box-shadow: 5px 5px 20px black;
     border-radius: 15px;
     position: relative;
@@ -529,6 +550,7 @@ h1{
     background:#1D0E2C;
     color: white;
     border-radius: 0 0 15px 15px ;
+    /* display: flex; */
 }
 
 
