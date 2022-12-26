@@ -339,7 +339,7 @@ border-radius: 0px 90px 10px 0px;
 padding-top: 3px;
 }
 .img_club{
-    background-image: url(../image/art_club.png);
+    /* background-image: url(../image/art_club.png); */
     background-repeat: no-repeat;
     width: 95%;
     background-position: center;
@@ -350,6 +350,18 @@ padding-top: 3px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end; 
+}
+.img_logo{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.img_logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 /* .demande{
     margin-left: auto;

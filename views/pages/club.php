@@ -17,13 +17,13 @@ require_once PROJ_DIR . "/includes/users_header.php";
         <section>
             <div class="club_title">
                 <h1>
-                Club : <?php echo $club["nom"]; ?> </h1>
+                 club <?php echo $club["nom"]; ?></h1>
             </div>
         </section>
         <section class="club_container">
             
-            <div class="img_club">
-              
+            <div class="img_logo" >
+               <img class="logoimg" src="<?php echo $club["logo"]; ?>">
             </div>
             <div class="decouvrir_btn">
                 <button type="submit" id="demande_Integra" class=" decouvrir" ><a href="?u=club&a=demande&id=<?php echo $club_id; ?>">Demande</a></button>
